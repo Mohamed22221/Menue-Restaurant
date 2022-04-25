@@ -4,4 +4,5 @@ export const Store = configureStore({
   reducer: {
       SliceCart : SliceCart
   },
+  
 })

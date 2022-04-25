@@ -1,13 +1,18 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
 import DataMenue from './DataMenue';
 import {  useDispatch, useSelector } from 'react-redux'
-import { deleteCart } from '../../store/SliceCart';
+import { deleteCart, TotalAmount } from '../../store/SliceCart';
 import {  Link } from "react-router-dom";
-const ItemCart = ({HandelHide}) => {
+const ItemCart = ({HandelHide }) => {
   const MyItemSelector = useSelector((state) =>state.SliceCart.cartItem )
   const Despatch = useDispatch()
+ 
+  useEffect(() => {
+    Despatch(TotalAmount())
+    }, [MyItemSelector ])
+
   return (
     <StyleItemCart>
         {MyItemSelector.length <= 0 ? 
@@ -19,16 +24,16 @@ const ItemCart = ({HandelHide}) => {
         :  MyItemSelector.map((item)=>{
           
             return (
-                <ItemOneCart key={item.id}>
+                <ItemOneCart key={item.id} >
                 <div className='img'>
                 <img src={item.img}/>
                 <h1>{item.name}</h1>
                 <span>x{item.quantityUp}</span>
                 </div>
                 <div className='price'>
-                <p>${item.price}</p>
+                <p>${item.price.toFixed(2) * item.quantityUp}</p>
                 </div>
-               <CloseIcon  onClick={ () => Despatch(deleteCart(item.id)) }  className='close-icon'/>
+               <CloseIcon   onClick={ () => Despatch(deleteCart(item.id)) }  className='close-icon'/>
                 </ItemOneCart>
             )
         })}

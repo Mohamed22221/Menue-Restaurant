@@ -5,7 +5,10 @@ import GlopalStyle from './style/GlopalStyle';
 import {Store} from "./store/Store"
 import { Provider } from 'react-redux'
 
+
+
 ReactDOM.render(
+  
   <React.StrictMode>
     <GlopalStyle/>
     <Provider store={Store}>

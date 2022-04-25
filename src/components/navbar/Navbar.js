@@ -1,19 +1,26 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef  } from "react";
 import { Container } from '@mui/material';
 import LogoLight from"../../img/menue/logoo.png"
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import "./Navbar.css";
 import {  Link } from "react-router-dom";
+import {  useSelector } from "react-redux";
+
+
 const Navbar = ({HandelShow}) => {
   const [toggle, setToggle] = useState(false);
   const linksContainer = useRef();
+  const SelectorTotalAmount = useSelector((state) =>state.SliceCart.cartQuantity)
+
   const handleToggle = () => {
     setToggle(!toggle);
   };
   const boxHandler = () => {
     setToggle(false);
   };
+
+
   return ( 
     <div className="main-nav">
 
@@ -46,6 +53,7 @@ const Navbar = ({HandelShow}) => {
           <li>
             <a onClick={boxHandler}  href="#Teletoken">
             <ShoppingBagIcon onClick={HandelShow}/>
+            <span>{SelectorTotalAmount}</span>
             </a>
           </li>
           <li>

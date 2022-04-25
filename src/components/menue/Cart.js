@@ -1,14 +1,19 @@
-import React, { useState } from 'react'
+
 import styled from 'styled-components'
 import { motion } from "framer-motion"
 import CloseIcon from '@mui/icons-material/Close';
 import ItemCart from './ItemCart';
+import {  useDispatch, useSelector } from 'react-redux';
+import React ,{useEffect} from 'react'
+import { TotalAmount } from '../../store/SliceCart';
 
 const Cart = ({HandelHide}) => {
+  const Despatch = useDispatch()
+  const SelectorTotalAmount = useSelector((state) =>state.SliceCart.cartTotalAmount)
 
   return (
     <StyleMainCart  as={motion.div} animate={{ opacity: 4 }}>
-      <MainCart >
+      <MainCart  >
         <div className='header-cart'>
           <h1>YOUR CART</h1>
           <CloseIcon className='CloseIcon' onClick={HandelHide}/>
@@ -16,7 +21,7 @@ const Cart = ({HandelHide}) => {
         <ItemCart HandelHide={HandelHide}/>
         <div className='fotter-cart'>
           <div className='right-cart'>
-            <h1>Total: <span>129.86$</span></h1>
+            <h1>Total: <span >{SelectorTotalAmount.toFixed(2)}</span></h1>
           </div>
           <button>CHECKOUT</button>
         </div>

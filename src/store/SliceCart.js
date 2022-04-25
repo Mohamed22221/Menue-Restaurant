@@ -22,12 +22,28 @@ export const SliceCart = createSlice({
     //delete cart item
     deleteCart : (state ,action) =>{
       state.cartItem = state.cartItem.filter((cartitem) => cartitem.id != action.payload )
-    }
-    
+    },
+     //cartTotalAmount cart item
+     TotalAmount : (state ,action) =>{
+      
+     const {total , quantity} = state.cartItem.reduce((previtem , curentItem) =>{
+        const {price , quantityUp} = curentItem 
+        const TotalPrice = price * quantityUp // price 
+        previtem.total += TotalPrice
+        previtem.quantity += quantityUp
+        return previtem
+       }, {
+        total : 0,
+        quantity : 0
+       });
+       state.cartTotalAmount = total
+       state.cartQuantity = quantity 
+    },
   },
+
  
 })
 
-export const {AddToCart ,deleteCart} = SliceCart.actions
+export const {AddToCart ,deleteCart ,TotalAmount} = SliceCart.actions
 
 export default SliceCart.reducer

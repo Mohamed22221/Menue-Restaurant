@@ -1,24 +1,23 @@
-import React from 'react'
+import React ,{useEffect}  from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import { motion } from "framer-motion"
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import { useDispatch } from 'react-redux';
-import { AddToCart } from '../../store/SliceCart';
+import { useDispatch, useSelector } from 'react-redux';
+import { AddToCart, TotalAmount} from '../../store/SliceCart';
 const MenuFilter = ({menueData}) => {
     // sliceCart dispatch 
     const Despatch = useDispatch()
-    // Add to Cart Action
 
+    
   return (
-      
     <StyleFilterMenue>
         <Container maxWidth="lg">
         <MainMenue>
             {menueData.map((item)=>{
                 return (
-                <ItemMenue key={item.id} as={motion.div}   initial={{ opacity: 0 }}
+                <ItemMenue  key={item.id} as={motion.div} initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}>
                   <div className='img-menue'>
@@ -34,7 +33,7 @@ const MenuFilter = ({menueData}) => {
                       <StarIcon/><StarIcon/>                           
                   </div>
                   <div className='button-order'>
-                      <button onClick={ ()=> Despatch(AddToCart(item))}>order<span><ShoppingBagIcon/></span></button>
+                      <button  onClick={ ()=> Despatch(AddToCart(item))}>order<span><ShoppingBagIcon/></span></button>
                  </div>  
 
                 </ItemMenue>
