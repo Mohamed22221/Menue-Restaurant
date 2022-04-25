@@ -3,15 +3,12 @@ import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
 import DataMenue from './DataMenue';
 import {  useDispatch, useSelector } from 'react-redux'
-import { deleteCart, TotalAmount } from '../../store/SliceCart';
+import { deleteCart } from '../../store/SliceCart';
 import {  Link } from "react-router-dom";
 const ItemCart = ({HandelHide }) => {
   const MyItemSelector = useSelector((state) =>state.SliceCart.cartItem )
   const Despatch = useDispatch()
  
-  useEffect(() => {
-    Despatch(TotalAmount())
-    }, [MyItemSelector ])
 
   return (
     <StyleItemCart>

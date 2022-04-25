@@ -1,9 +1,9 @@
 import React, { useState, useRef  } from "react";
+import "./Navbar.css";
 import { Container } from '@mui/material';
 import LogoLight from"../../img/menue/logoo.png"
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
-import "./Navbar.css";
+import { FaShopify } from 'react-icons/fa';
+import { IoIosSearch } from 'react-icons/io';
 import {  Link } from "react-router-dom";
 import {  useSelector } from "react-redux";
 
@@ -52,19 +52,15 @@ const Navbar = ({HandelShow}) => {
           </li>
           <li>
             <a onClick={boxHandler}  href="#Teletoken">
-            <ShoppingBagIcon onClick={HandelShow}/>
+            <FaShopify className="shop" onClick={HandelShow}/>
             <span>{SelectorTotalAmount}</span>
             </a>
           </li>
           <li>
             <a onClick={boxHandler} href="#Contact">
-            <ContentPasteSearchIcon/>
+            <IoIosSearch className="shop"/>
             </a>
           </li>
-
-
-          
-  
         </ul>
         <div onClick={handleToggle} className="toggle-button">
           <i className={toggle ? "fas fa-times" : "fas fa-bars"}></i>

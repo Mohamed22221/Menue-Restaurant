@@ -53,6 +53,21 @@ nav {
     font-weight: bold;
     transition: 0.7s;
   }
+  .shop{
+    position: relative;
+    font-size: 24px;
+  }
+  ul li a span{
+    position: absolute;
+    top: -8px;
+    right: -9px;
+    background-color: red;
+    border-radius: 50%;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    padding-top: 1px;
+  }
   
   ul li a::after {
     content: "";

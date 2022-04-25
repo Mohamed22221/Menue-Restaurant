@@ -21,7 +21,7 @@ const Cart = ({HandelHide}) => {
         <ItemCart HandelHide={HandelHide}/>
         <div className='fotter-cart'>
           <div className='right-cart'>
-            <h1>Total: <span >{SelectorTotalAmount.toFixed(2)}</span></h1>
+            <h1>Total: <span >${SelectorTotalAmount.toFixed(2)}</span></h1>
           </div>
           <button>CHECKOUT</button>
         </div>
