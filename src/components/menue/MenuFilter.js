@@ -107,7 +107,8 @@ transition: 0.4s;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    overflow: hidden;
+    position: relative;
     cursor: pointer;
     border:0px solid white;
     border-radius:5px ;
@@ -116,15 +117,17 @@ transition: 0.4s;
     padding: 10px 40px;
     background-color:var(--red-color) ;
     transition: 0.4s;
+    
     span{
         transition: 0.4s;
         margin-left:10px;
     }
     &:hover{
+        transition: 0.9s;
         span{
             transform: translateX(5px);
         }
-        opacity: 0.7;
+        opacity: 0.6;
     }
     }
     
