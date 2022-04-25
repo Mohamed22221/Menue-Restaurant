@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import { motion } from "framer-motion"
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import { FaShopify } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { AddToCart, TotalAmount} from '../../store/SliceCart';
 const MenuFilter = ({menueData}) => {
@@ -33,7 +33,7 @@ const MenuFilter = ({menueData}) => {
                       <StarIcon/><StarIcon/>                           
                   </div>
                   <div className='button-order'>
-                      <button  onClick={ ()=> Despatch(AddToCart(item))}>order<span><ShoppingBagIcon/></span></button>
+                      <button  onClick={ ()=> Despatch(AddToCart(item))}>order<span><FaShopify className='shop'/></span></button>
                  </div>  
 
                 </ItemMenue>
@@ -107,6 +107,7 @@ transition: 0.4s;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     cursor: pointer;
     border:0px solid white;
     border-radius:5px ;
@@ -115,11 +116,14 @@ transition: 0.4s;
     padding: 10px 40px;
     background-color:var(--red-color) ;
     transition: 0.4s;
-    .span{
-        margin-top: 4px;
+    span{
+        transition: 0.4s;
+        margin-left:10px;
     }
     &:hover{
-        
+        span{
+            transform: translateX(5px);
+        }
         opacity: 0.7;
     }
     }

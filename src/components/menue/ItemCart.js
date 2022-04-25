@@ -5,6 +5,8 @@ import DataMenue from './DataMenue';
 import {  useDispatch, useSelector } from 'react-redux'
 import { deleteCart } from '../../store/SliceCart';
 import {  Link } from "react-router-dom";
+import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
+
 const ItemCart = ({HandelHide }) => {
   const MyItemSelector = useSelector((state) =>state.SliceCart.cartItem )
   const Despatch = useDispatch()
@@ -15,7 +17,11 @@ const ItemCart = ({HandelHide }) => {
         {MyItemSelector.length <= 0 ? 
         <div >
         <h3 className='empty-text'>cart item empty</h3>
+        <div className='go-shoping'>
+        <BsFillArrowLeftCircleFill />
         <Link to='/Menue-Restaurant' onClick={HandelHide}>Go to Shoping</Link> 
+        
+        </div>
         </div>
         
         :  MyItemSelector.map((item)=>{
@@ -50,12 +56,18 @@ overflow-y: auto;
   font-size: 17px;
   color: var(--red-color);
 }
+.go-shoping{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 a{
  display: flex;
  justify-content: center;
  color: var(--text-color);
  padding: 10px;
  font-weight: bold;
+ 
 }
 
 `
