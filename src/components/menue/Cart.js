@@ -13,7 +13,7 @@ const Cart = ({HandelHide}) => {
           <h1>YOUR CART</h1>
           <CloseIcon className='CloseIcon' onClick={HandelHide}/>
         </div>
-        <ItemCart/>
+        <ItemCart HandelHide={HandelHide}/>
         <div className='fotter-cart'>
           <div className='right-cart'>
             <h1>Total: <span>129.86$</span></h1>
