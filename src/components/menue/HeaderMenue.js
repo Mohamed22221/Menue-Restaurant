@@ -69,7 +69,7 @@ const MainHeader = styled.div`
         left: 10%;
         top: 20%; 
         transform: translate(-10%);
-        font-size: 60px;
+        font-size: 50px;
         }
         }
         .icon-star{
@@ -77,6 +77,7 @@ const MainHeader = styled.div`
          color: gold;
          font-size: 39px;
         }
+        
         h1 span{
             
                 color: var(--gold-color);

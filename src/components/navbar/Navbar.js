@@ -4,7 +4,7 @@ import LogoLight from"../../img/menue/logoo.png"
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import "./Navbar.css";
-
+import {  Link } from "react-router-dom";
 const Navbar = ({HandelShow}) => {
   const [toggle, setToggle] = useState(false);
   const linksContainer = useRef();
@@ -17,7 +17,7 @@ const Navbar = ({HandelShow}) => {
   return ( 
     <div className="main-nav">
 
-    
+
     <Container maxWidth="lg">
       <nav>
           <div className="logo">
@@ -34,9 +34,9 @@ const Navbar = ({HandelShow}) => {
             </a>
           </li>
           <li>
-            <a onClick={boxHandler} href='#About' >
+            <Link onClick={boxHandler} to='/Menue-Restaurant' >
               Menu
-            </a>
+            </Link>
           </li>
           <li>
             <a onClick={boxHandler} href="#Prx Features">

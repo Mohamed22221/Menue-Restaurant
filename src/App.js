@@ -3,7 +3,8 @@ import Cart from "./components/menue/Cart";
 import Navbar from "./components/navbar/Navbar"
 import React, { useState } from 'react'
 import OverLay from "./components/glopalComponent/OverLay";
-import styled from 'styled-components'
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+
 function App() {
   //show and hide cart
   const [show , setShow] = useState(false)
@@ -15,16 +16,24 @@ function App() {
   }
   return (
     
-    <MainApp>
-      {show && <Cart HandelHide={HandelHide}/>}
+    <>
+    <BrowserRouter>
+    {show && <Cart HandelHide={HandelHide}/>}
       {show &&<OverLay HandelHide={HandelHide} />}
       <Navbar HandelShow={HandelShow} />
-      <Menue/>
-    </MainApp>
+      <Routes>
+      <Route path="/" element={<Menue/> } />
+      <Route path="Menue-Restaurant" element={<Menue/>} />
+      </Routes>
+      
+    </BrowserRouter>
+ 
+      
+    
+
+    </>
 
   );
 }
-const MainApp = styled.div`
 
-`
 export default App;

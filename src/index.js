@@ -10,7 +10,7 @@ ReactDOM.render(
     <GlopalStyle/>
     <Provider store={Store}>
     <App />
-    </Provider>
+     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
