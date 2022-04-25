@@ -4,7 +4,13 @@ import { Container } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import { motion } from "framer-motion"
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import { useDispatch } from 'react-redux';
+import { AddToCart } from '../../store/SliceCart';
 const MenuFilter = ({menueData}) => {
+    // sliceCart dispatch 
+    const Despatch = useDispatch()
+    // Add to Cart Action
+
   return (
       
     <StyleFilterMenue>
@@ -28,7 +34,7 @@ const MenuFilter = ({menueData}) => {
                       <StarIcon/><StarIcon/>                           
                   </div>
                   <div className='button-order'>
-                      <button>order<span><ShoppingBagIcon/></span></button>
+                      <button onClick={ ()=> Despatch(AddToCart(item))}>order<span><ShoppingBagIcon/></span></button>
                  </div>  
 
                 </ItemMenue>
