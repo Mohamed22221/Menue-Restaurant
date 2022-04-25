@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Menue-Restaurant/static/css/main.57f9e6a3.css",
-    "main.js": "/Menue-Restaurant/static/js/main.f317433c.js",
+    "main.css": "/Menue-Restaurant/static/css/main.c69c4983.css",
+    "main.js": "/Menue-Restaurant/static/js/main.067b96a6.js",
     "static/media/background.jpg": "/Menue-Restaurant/static/media/background.1407ff3348c88a7c9f5d.jpg",
     "static/media/pizza1.png": "/Menue-Restaurant/static/media/pizza1.3d98648533bdf51812b4.png",
     "static/media/pizza3.png": "/Menue-Restaurant/static/media/pizza3.e5ec3734b481b87612b0.png",
@@ -16,11 +16,11 @@
     "static/media/dessert.png": "/Menue-Restaurant/static/media/dessert.aa727cf11a082e0c1bea.png",
     "static/media/pizza.png": "/Menue-Restaurant/static/media/pizza.e36c8977e5912b806741.png",
     "index.html": "/Menue-Restaurant/index.html",
-    "main.57f9e6a3.css.map": "/Menue-Restaurant/static/css/main.57f9e6a3.css.map",
-    "main.f317433c.js.map": "/Menue-Restaurant/static/js/main.f317433c.js.map"
+    "main.c69c4983.css.map": "/Menue-Restaurant/static/css/main.c69c4983.css.map",
+    "main.067b96a6.js.map": "/Menue-Restaurant/static/js/main.067b96a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.57f9e6a3.css",
-    "static/js/main.f317433c.js"
+    "static/css/main.c69c4983.css",
+    "static/js/main.067b96a6.js"
   ]
 }
