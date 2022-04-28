@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Menue-Restaurant/static/css/main.c69c4983.css",
-    "main.js": "/Menue-Restaurant/static/js/main.ec5b01a5.js",
+    "main.js": "/Menue-Restaurant/static/js/main.93fa5400.js",
     "static/media/background.jpg": "/Menue-Restaurant/static/media/background.1407ff3348c88a7c9f5d.jpg",
     "static/media/pizza1.png": "/Menue-Restaurant/static/media/pizza1.3d98648533bdf51812b4.png",
     "static/media/pizza3.png": "/Menue-Restaurant/static/media/pizza3.e5ec3734b481b87612b0.png",
@@ -11,16 +11,17 @@
     "static/media/disert3.png": "/Menue-Restaurant/static/media/disert3.005045e6ac98b1210894.png",
     "static/media/salad1.png": "/Menue-Restaurant/static/media/salad1.ec46b1b8766ab2b5e332.png",
     "static/media/disert2.png": "/Menue-Restaurant/static/media/disert2.bc866de31f6686bc272a.png",
+    "static/media/googleplay.png": "/Menue-Restaurant/static/media/googleplay.75e5a89bc6217268df73.png",
     "static/media/disert4.png": "/Menue-Restaurant/static/media/disert4.99fcf9c385f2b5bab059.png",
     "static/media/disert1.png": "/Menue-Restaurant/static/media/disert1.ad507fd17f0840cbdcf2.png",
     "static/media/dessert.png": "/Menue-Restaurant/static/media/dessert.aa727cf11a082e0c1bea.png",
     "static/media/pizza.png": "/Menue-Restaurant/static/media/pizza.e36c8977e5912b806741.png",
     "index.html": "/Menue-Restaurant/index.html",
     "main.c69c4983.css.map": "/Menue-Restaurant/static/css/main.c69c4983.css.map",
-    "main.ec5b01a5.js.map": "/Menue-Restaurant/static/js/main.ec5b01a5.js.map"
+    "main.93fa5400.js.map": "/Menue-Restaurant/static/js/main.93fa5400.js.map"
   },
   "entrypoints": [
     "static/css/main.c69c4983.css",
-    "static/js/main.ec5b01a5.js"
+    "static/js/main.93fa5400.js"
   ]
 }
