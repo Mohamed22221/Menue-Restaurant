@@ -8,21 +8,24 @@ import DataMenue from '../components/menue/DataMenue';
 const Menue = () => {
   //filter Button
  const [menueData, setMenueData] = useState(DataMenue)
+ const [clicked, setclicked] = useState(false)
 
  const FilterButton = (button)=>{
   const DataFilterMenue = DataMenue.filter((item)=>item.type == button)
+
   if (button === "All") {
     setMenueData(DataMenue)
     return;
   }else{
    setMenueData(DataFilterMenue)  
   }
+  setclicked("true")
 }
 
   return (
     <MenueStyle>
       <HeaderMenue />
-      <ButtonMenue FilterButton={FilterButton}/>
+      <ButtonMenue FilterButton={FilterButton} clicked={clicked}/>
       <MenuFilter menueData={menueData}/>
     </MenueStyle>
   )

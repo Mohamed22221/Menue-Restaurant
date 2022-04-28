@@ -2,17 +2,30 @@ import React , {useEffect} from 'react'
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
 import {  useDispatch, useSelector } from 'react-redux'
-import { deleteCart } from '../../store/SliceCart';
+import { deleteCart, increseItem , decreseItem} from '../../store/SliceCart';
 import {  Link } from "react-router-dom";
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
+import { IoIosArrowUp } from 'react-icons/io';
+import { IoIosArrowDown } from 'react-icons/io';
 import {  useToasts } from 'react-toast-notifications';
+
 const ItemCart = ({HandelHide }) => {
   const MyItemSelector = useSelector((state) =>state.SliceCart.cartItem )
   const Despatch = useDispatch()
   const { addToast } = useToasts();
   const HandelDelete = (item) =>{
     Despatch(deleteCart(item))
-    addToast("Delete an item from the cart", { appearance: 'error' });
+    addToast(`${item.name} removed To Cart` , { appearance: 'error' });
+
+  }
+  const HandelIncrese = (item) =>{
+    Despatch(increseItem(item))
+  }
+  const HandelDecrese = (item) =>{
+    Despatch(decreseItem(item))
+    if(item.quantityUp <=1) {
+      Despatch(deleteCart(item))
+    }
   }
   return (
     <StyleItemCart>
@@ -33,9 +46,14 @@ const ItemCart = ({HandelHide }) => {
                 <h1>{item.name}</h1>
                 <span>x{item.quantityUp}</span>
                 </div>
+                <div className='quantity'>
+                  <IoIosArrowUp className='icon-quantity' onClick={() => HandelIncrese(item)}  />
+                  <IoIosArrowDown className='icon-quantity' onClick={() => HandelDecrese(item)}   />
+                </div>
                 <div className='price'>
                 <p>${item.price.toFixed(2) * item.quantityUp}</p>
                 </div>
+
                <CloseIcon onClick={ () => HandelDelete(item)}  className='close-icon'/>
                 </ItemOneCart>
             )
@@ -116,6 +134,15 @@ align-items: center;
 color: #898787cc;
     cursor: pointer;
     font-size: 28px;
+    }
+    .quantity{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .icon-quantity{
+        cursor: pointer;
+        font-size: 18px;
+      }
     }
 `
 export default ItemCart

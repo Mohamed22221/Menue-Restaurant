@@ -24,7 +24,23 @@ export const SliceCart = createSlice({
     //delete cart item
     deleteCart : (state ,action) =>{
       state.cartItem = state.cartItem.filter((cartitem) => cartitem.id != action.payload.id )
-      
+
+    },
+    //increse and decrese quantity
+    increseItem : (state ,action) =>{
+      const FindMenueIndex =  state.cartItem.findIndex((item) => item.id == action.payload.id)
+      if (FindMenueIndex >= 0) {
+          state.cartItem[FindMenueIndex].quantityUp += 1 
+      }
+    } ,
+    decreseItem : (state ,action) =>{
+      const FindMenueIndex =  state.cartItem.findIndex((item) => item.id == action.payload.id)
+       if (FindMenueIndex >= 0 ) {
+        state.cartItem[FindMenueIndex].quantityUp -= 1
+       } 
+
+
+
     },
      //cartTotalAmount cart item
      TotalAmount : (state ,action) =>{
@@ -47,6 +63,6 @@ export const SliceCart = createSlice({
  
 })
 
-export const {AddToCart ,deleteCart ,TotalAmount} = SliceCart.actions
+export const {AddToCart ,deleteCart ,TotalAmount , increseItem ,decreseItem} = SliceCart.actions
 
 export default SliceCart.reducer

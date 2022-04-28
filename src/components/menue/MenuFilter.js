@@ -13,9 +13,8 @@ const MenuFilter = ({menueData}) => {
     const { addToast } = useToasts();
     const HandelOrder = (item) =>{
         Despatch(AddToCart(item))
-        addToast('Add item to cart', { appearance: 'success' });
+        addToast(`${item.name} Added To Cart`, { appearance: 'success' });
     }
-    
   return (
     <StyleFilterMenue>
         <Container maxWidth="lg">
@@ -30,7 +29,7 @@ const MenuFilter = ({menueData}) => {
                   </div>
                   <div className='apout-menu'>
                       <h2>{item.name}</h2>
-                      <h5>{item.price}</h5>
+                      <h5>{item.price}$</h5>
                       <p>{item.discription}</p>
                   </div>
                   <div className='icon-menue'>

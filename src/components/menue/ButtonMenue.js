@@ -7,14 +7,14 @@ import pasta from"../../img/menue/pasta.png"
 import dessert from"../../img/menue/dessert.png" 
 
 
-const ButtonMenue = ({FilterButton}) => {  
+const ButtonMenue = ({FilterButton , clicked}) => {  
   return (
-    <MainButton>
-        <button onClick={()=>FilterButton("All")}><img src={All}/>All</button>
-        <button type='button' onClick={()=>FilterButton("pizza")} ><img src={pizza}/>pizza</button>
-        <button type='button' onClick={()=>FilterButton("salad")}><img src={salad}/>salad</button>
-        <button type='button' onClick={()=>FilterButton("pasta")}><img src={pasta}/>pasta</button>
-        <button type='button' onClick={()=>FilterButton("dessert")}><img src={dessert}/>dessert</button>
+    <MainButton clicked={clicked} >
+        <button clicked={clicked}   onClick={()=>FilterButton("All")} ><img src={All}/>All</button>
+        <button type='button'  onClick={()=>FilterButton("pizza")} ><img src={pizza}/>pizza</button>
+        <button type='button'   onClick={()=>FilterButton("salad")}><img src={salad}/>salad</button>
+        <button type='button'  onClick={()=>FilterButton("pasta")}><img src={pasta}/>pasta</button>
+        <button type='button'    onClick={()=>FilterButton("dessert")}><img src={dessert}/>dessert</button>
     </MainButton>
   )
 
@@ -26,7 +26,7 @@ justify-content: center;
 flex-wrap: wrap;
 background-color: var(--red-color);
 
-button{
+ button{
 
     all: unset;
     display: flex;
@@ -36,7 +36,7 @@ button{
     color: #ffffff7b;
     cursor: pointer;
     &:nth-child(1){
-      color: white;
+      color:white;
       img{
         border: 6px solid white;
         opacity: 1;
