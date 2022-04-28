@@ -7,6 +7,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { TotalAmount } from "./store/SliceCart";
 import { ToastProvider } from 'react-toast-notifications';
+import Fotter from "./components/fotter/Fotter";
 
 function App() {
   const [show , setShow] = useState(false)
@@ -27,7 +28,7 @@ function App() {
     <>
     <ToastProvider 
     autoDismiss
-    autoDismissTimeout={3000}
+    autoDismissTimeout={4000}
     placement="bottom-right" >
     <BrowserRouter>
       {show && <Cart HandelHide={HandelHide}/>}
@@ -37,6 +38,7 @@ function App() {
       <Route path="/" element={<Menue/> } />
       <Route path="Menue-Restaurant" element={<Menue/>} />
       </Routes>
+      <Fotter />
     </BrowserRouter>
     </ToastProvider>
     </>

@@ -20,6 +20,7 @@ const ItemCart = ({HandelHide }) => {
   }
   const HandelIncrese = (item) =>{
     Despatch(increseItem(item))
+    
   }
   const HandelDecrese = (item) =>{
     Despatch(decreseItem(item))
