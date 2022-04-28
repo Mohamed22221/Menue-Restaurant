@@ -43,20 +43,7 @@ const MainHeader = styled.div`
         height: 100%;
         z-index: 1;
      }
-     &::before{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 20px;
-        bottom: 0px;
-        padding-top: 15px;
-        background-size: auto 75px;
-        background-repeat: repeat-x;
-         background-position: center 0px;
-        background-image: url(http://androthemes.com/themes/wp/slices/wp-content/themes/slices/assets/css/../img/texture-1.svg);
-        z-index: 2;
-   
-}
+
         h1 ,.icon-star{
         position: absolute;
         left: 50%;

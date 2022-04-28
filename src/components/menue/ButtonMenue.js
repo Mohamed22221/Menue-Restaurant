@@ -24,15 +24,30 @@ const MainButton = styled.div`
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
+background-color: var(--red-color);
+
 button{
+
     all: unset;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding: 30px;
+    color: #ffffff7b;
     cursor: pointer;
+    &:nth-child(1){
+      color: white;
+      img{
+        border: 6px solid white;
+        opacity: 1;
+      }
+    }
     img{
-    width: 60px;
+    width: 80px;
+    border: 6px solid #ffffff7b;
+    border-radius: 50%;
+    opacity: 0.7;
+
     }
     @media (max-width:833px) {
     padding: 15px;
