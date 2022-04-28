@@ -6,6 +6,7 @@ import OverLay from "./components/glopalComponent/OverLay";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { TotalAmount } from "./store/SliceCart";
+import { ToastProvider } from 'react-toast-notifications';
 
 function App() {
   const [show , setShow] = useState(false)
@@ -24,6 +25,10 @@ function App() {
     }, [MyItemSelector ])
   return (
     <>
+    <ToastProvider 
+    autoDismiss
+    autoDismissTimeout={3000}
+    placement="bottom-right" >
     <BrowserRouter>
       {show && <Cart HandelHide={HandelHide}/>}
       {show &&<OverLay HandelHide={HandelHide} />}
@@ -33,6 +38,7 @@ function App() {
       <Route path="Menue-Restaurant" element={<Menue/>} />
       </Routes>
     </BrowserRouter>
+    </ToastProvider>
     </>
 
   );

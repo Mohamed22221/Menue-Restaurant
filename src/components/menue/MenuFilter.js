@@ -1,15 +1,20 @@
-import React ,{useEffect}  from 'react'
+import React   from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import { motion } from "framer-motion"
 import { FaShopify } from 'react-icons/fa';
-import { useDispatch, useSelector } from 'react-redux';
-import { AddToCart, TotalAmount} from '../../store/SliceCart';
+import { useDispatch } from 'react-redux';
+import { AddToCart} from '../../store/SliceCart';
+import {  useToasts } from 'react-toast-notifications';
 const MenuFilter = ({menueData}) => {
     // sliceCart dispatch 
     const Despatch = useDispatch()
-
+    const { addToast } = useToasts();
+    const HandelOrder = (item) =>{
+        Despatch(AddToCart(item))
+        addToast('Add item to cart', { appearance: 'success' });
+    }
     
   return (
     <StyleFilterMenue>
@@ -33,7 +38,7 @@ const MenuFilter = ({menueData}) => {
                       <StarIcon/><StarIcon/>                           
                   </div>
                   <div className='button-order'>
-                      <button  onClick={ ()=> Despatch(AddToCart(item))}>order<span><FaShopify className='shop'/></span></button>
+                      <button  onClick={ ()=> HandelOrder(item) }>order<span><FaShopify className='shop'/></span></button>
                  </div>  
 
                 </ItemMenue>
@@ -101,7 +106,7 @@ transition: 0.4s;
     color: var(--gold-color);
 }
 .button-order{
-    padding: 9px 0;
+    padding: 5px 0;
     button{
     all: unset;
     display: flex;
@@ -114,7 +119,7 @@ transition: 0.4s;
     border-radius:5px ;
     color: white;
     font-size:20px;
-    padding: 10px 40px;
+    padding: 10px 30px;
     background-color:var(--red-color) ;
     transition: 0.4s;
     

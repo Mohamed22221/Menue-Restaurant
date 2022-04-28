@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
+
+
 const initialState = {
   cartItem : [] ,
   cartQuantity: 0 ,
@@ -21,7 +23,8 @@ export const SliceCart = createSlice({
     },
     //delete cart item
     deleteCart : (state ,action) =>{
-      state.cartItem = state.cartItem.filter((cartitem) => cartitem.id != action.payload )
+      state.cartItem = state.cartItem.filter((cartitem) => cartitem.id != action.payload.id )
+      
     },
      //cartTotalAmount cart item
      TotalAmount : (state ,action) =>{

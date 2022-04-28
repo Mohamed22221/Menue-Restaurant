@@ -1,17 +1,19 @@
 import React , {useEffect} from 'react'
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
-import DataMenue from './DataMenue';
 import {  useDispatch, useSelector } from 'react-redux'
 import { deleteCart } from '../../store/SliceCart';
 import {  Link } from "react-router-dom";
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
-
+import {  useToasts } from 'react-toast-notifications';
 const ItemCart = ({HandelHide }) => {
   const MyItemSelector = useSelector((state) =>state.SliceCart.cartItem )
   const Despatch = useDispatch()
- 
-
+  const { addToast } = useToasts();
+  const HandelDelete = (item) =>{
+    Despatch(deleteCart(item))
+    addToast("Delete an item from the cart", { appearance: 'error' });
+  }
   return (
     <StyleItemCart>
         {MyItemSelector.length <= 0 ? 
@@ -20,12 +22,10 @@ const ItemCart = ({HandelHide }) => {
         <div className='go-shoping'>
         <BsFillArrowLeftCircleFill />
         <Link to='/Menue-Restaurant' onClick={HandelHide}>Go To Menu</Link> 
-        
         </div>
         </div>
-        
+        /*loop slicecart redux */
         :  MyItemSelector.map((item)=>{
-          
             return (
                 <ItemOneCart key={item.id} >
                 <div className='img'>
@@ -36,7 +36,7 @@ const ItemCart = ({HandelHide }) => {
                 <div className='price'>
                 <p>${item.price.toFixed(2) * item.quantityUp}</p>
                 </div>
-               <CloseIcon   onClick={ () => Despatch(deleteCart(item.id)) }  className='close-icon'/>
+               <CloseIcon onClick={ () => HandelDelete(item)}  className='close-icon'/>
                 </ItemOneCart>
             )
         })}
