@@ -26,6 +26,7 @@ const ItemCart = ({HandelHide }) => {
     Despatch(decreseItem(item))
     if(item.quantityUp <=1) {
       Despatch(deleteCart(item))
+      addToast(`${item.name} removed To Cart` , { appearance: 'error' }); 
     }
   }
   return (

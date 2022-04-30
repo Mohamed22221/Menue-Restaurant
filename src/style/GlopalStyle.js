@@ -19,7 +19,7 @@ const GlopalStyle = createGlobalStyle`
 }
 body{
     font-family: 'Tajawal', sans-serif;
-    height: 2000px;
+
 }
 body::-webkit-scrollbar{
     width: 9px;
