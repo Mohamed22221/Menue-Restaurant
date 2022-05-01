@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { TotalAmount } from "./store/SliceCart";
 import { ToastProvider } from 'react-toast-notifications';
 import Fotter from "./components/fotter/Fotter";
+import MealName from "./components/menue/MealName";
 
 function App() {
   const [show , setShow] = useState(false)
@@ -37,6 +38,9 @@ function App() {
       <Routes>
       <Route path="/" element={<Menue/> } />
       <Route path="Menue-Restaurant" element={<Menue/>} />
+      <Route path="/meal" element={<MealName />} >
+      <Route path=":mealId" element={<MealName/>} />
+      </Route>
       </Routes>
       <Fotter />
     </BrowserRouter>

@@ -4,9 +4,12 @@ import { Container } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import { motion } from "framer-motion"
 import { FaShopify } from 'react-icons/fa';
+import { GoPlusSmall } from 'react-icons/go';
 import { useDispatch } from 'react-redux';
 import { AddToCart} from '../../store/SliceCart';
 import {  useToasts } from 'react-toast-notifications';
+import {  Link } from "react-router-dom";
+
 const MenuFilter = ({menueData}) => {
     // sliceCart dispatch 
     const Despatch = useDispatch()
@@ -33,11 +36,11 @@ const MenuFilter = ({menueData}) => {
                       <p>{item.discription}</p>
                   </div>
                   <div className='icon-menue'>
-                      <StarIcon/><StarIcon/>
-                      <StarIcon/><StarIcon/>                           
+                    {item.rating}
                   </div>
                   <div className='button-order'>
-                      <button  onClick={ ()=> HandelOrder(item) }>order<span><FaShopify className='shop'/></span></button>
+                      <button className='first-button'  onClick={ ()=> HandelOrder(item) }>Customize<span><GoPlusSmall className='shop'/></span></button>
+                    <Link to={`/meal/${item.name}`} > <button >Order<span><FaShopify className='shop'/></span></button></Link>
                  </div>  
 
                 </ItemMenue>
@@ -104,8 +107,12 @@ transition: 0.4s;
 .icon-menue{
     color: var(--gold-color);
 }
+
 .button-order{
     padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     button{
     all: unset;
     display: flex;
@@ -114,14 +121,14 @@ transition: 0.4s;
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    border:0px solid white;
-    border-radius:5px ;
-    color: white;
-    font-size:20px;
-    padding: 10px 30px;
-    background-color:var(--red-color) ;
     transition: 0.4s;
-    
+    border-radius:5px ;
+    padding: 7px 30px;
+    font-size:16px; 
+    color: white;
+    background-color:var(--red-color) ;
+    border:0px solid white;
+    margin: 4px;
     span{
         transition: 0.4s;
         margin-left:10px;
@@ -133,7 +140,19 @@ transition: 0.4s;
         }
         opacity: 0.6;
     }
+
+
     }
+    .first-button{
+        color: black;
+        background-color: white;
+        border: 1px solid var(--text-color);
+        padding: 6px 18px;
+        
+    }
+
+
+
     
 }
 `

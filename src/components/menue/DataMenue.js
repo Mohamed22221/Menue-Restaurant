@@ -8,7 +8,9 @@ import dessert1 from"../../img/menue/disert1.png"
 import dessert2 from"../../img/menue/disert2.png"  
 import dessert3 from"../../img/menue/disert3.png"  
 import dessert4 from"../../img/menue/disert4.png"  
-
+import StarIcon from '@mui/icons-material/Star';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import StarHalfIcon from '@mui/icons-material/StarHalf';
 
 const DataMenue = [
 // data pizza-------   
@@ -18,7 +20,8 @@ const DataMenue = [
         name:"Pepperoni Pizza",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pizza1,
-        price:13.99
+        price:13.99,
+        rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>]
     },
     {
         id:2,
@@ -26,7 +29,8 @@ const DataMenue = [
         name:"Vegetarian",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pizza2,
-        price:9.99
+        price:9.99,
+        rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>,<StarBorderIcon/>]
     },
     {
         id:3,
@@ -34,7 +38,8 @@ const DataMenue = [
         name:"Four Cheese",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pizza3,
-        price:10.99
+        price:10.99,
+        rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>]
     },
     {
         id:4,
@@ -42,7 +47,8 @@ const DataMenue = [
         name:"Barbeque Chicken",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pizza4,
-        price:12.99
+        price:12.99,
+        rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     }, 
 // data salad------- 
     {
@@ -51,7 +57,8 @@ const DataMenue = [
         name:"Ceaser Salad",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:salad1,
-        price:10.99
+        price:10.99,
+        rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>,<StarBorderIcon/>]
     },
 // data pasta-------       
     {
@@ -60,7 +67,8 @@ const DataMenue = [
         name:"Sea Food Noodles",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pasta1,
-        price:12.99
+        price:12.99,
+        rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>]
     },    
 // data dessert-------  
     {
@@ -69,7 +77,8 @@ const DataMenue = [
         name:"Rum With Soda",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:dessert1,
-        price:5.99
+        price:5.99,
+        rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>,<StarBorderIcon/>]
     }, 
     {
         id:8,
@@ -77,7 +86,8 @@ const DataMenue = [
         name:"Orange Juice",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:dessert2,
-        price:6.99
+        price:6.99,
+        rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     },    
     {
         id:9,
@@ -85,7 +95,8 @@ const DataMenue = [
         name:"Chocolate Cookies",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:dessert3,
-        price:3.99
+        price:3.99,
+        rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     }, 
     {
         id:10,
@@ -93,7 +104,8 @@ const DataMenue = [
         name:"Russian Beer",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:dessert4,
-        price:4.99
+        price:4.99,
+        rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>]
     },    
    
   
