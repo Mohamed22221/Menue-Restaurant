@@ -13,6 +13,7 @@ const ItemCart = ({HandelHide }) => {
   const MyItemSelector = useSelector((state) =>state.SliceCart.cartItem )
   const Despatch = useDispatch()
   const { addToast } = useToasts();
+  //action Delete  & Increse & Decrese 
   const HandelDelete = (item) =>{
     Despatch(deleteCart(item))
     addToast(`${item.name} removed To Cart` , { appearance: 'error' });
@@ -42,12 +43,15 @@ const ItemCart = ({HandelHide }) => {
         /*loop slicecart redux */
         :  MyItemSelector.map((item)=>{
             return (
+              
                 <ItemOneCart key={item.id} >
+                  <Link to={`/meal/${item.name}`} onClick={HandelHide} >
                 <div className='img'>
                 <img src={item.img}/>
                 <h1>{item.name}</h1>
                 <span>x{item.quantityUp}</span>
                 </div>
+                </Link>
                 <div className='quantity'>
                   <IoIosArrowUp className='icon-quantity' onClick={() => HandelIncrese(item)}  />
                   <IoIosArrowDown className='icon-quantity' onClick={() => HandelDecrese(item)}   />
@@ -57,7 +61,9 @@ const ItemCart = ({HandelHide }) => {
                 </div>
 
                <CloseIcon onClick={ () => HandelDelete(item)}  className='close-icon'/>
+              
                 </ItemOneCart>
+                
             )
         })}
 

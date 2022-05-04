@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useState , useEffect} from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material';
 import { useParams } from 'react-router-dom'
@@ -20,12 +20,42 @@ const MealName = ({MenuFilter}) => {
       Despatch(AddToCart(item))
       addToast(`${item.name} Added To Cart`, { appearance: 'success' });
   }
+  //active and inactive size
+  const [sizeState ,  setSizeState] = useState({
+    activeSize : null ,
+    sizeId : [{id:1 ,size:"11"},{id:2,size:"16"},{id:3,size:"22"}]
+  })
+
+  const HandelIndex = (index) =>{
+    setSizeState(
+     {...sizeState ,activeSize:sizeState.sizeId[index] }
+     
+    )
+    console.log(sizeState)
+  }
+  const HandelClassName = (index) =>{
+    if(sizeState.sizeId[index] === sizeState.activeSize){
+      return "size active"
+    }else{
+      return "size inactive"
+    }
+
+  }
+// when app to start
+useEffect(() => {
+  setSizeState(
+    {...sizeState ,activeSize:sizeState.sizeId[0] }
+   )
+}, [setSizeState])
+
+  
+
   return (
     <StyleMealName  as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-      { DataMenue.filter((item => item.name === ParamsId)).map((item) =>{
+      { DataMenue.filter((item => item.name === ParamsId)).map((item , index) =>{
     return (
-      <Container key={item.id}>
-      <StyleItemMeal >
+      <Container key={item.id} >
+      <StyleItemMeal key={item.id} >
         <LeftMeal>
           <img src={item.img} />
         </LeftMeal>
@@ -40,12 +70,14 @@ const MealName = ({MenuFilter}) => {
           </div> 
           <div className='about'>
           <h3>${item.price}</h3>
-          <p>${item.discription}</p>
+          <p>{item.allDisciption}</p>
           <h4>
-            Size : 
-          
+            Size :{sizeState.sizeId.map((item , index)=>{
+              return (
+                <span className={HandelClassName(index)} key={index} onClick={()=>HandelIndex(index)}>{item.size}</span>
+              )
+            })} 
           </h4>
-
           </div> 
       </RightMeal>
       </StyleItemMeal>
@@ -118,6 +150,23 @@ flex: 2;
     color: var(--text-color);
     width: 70%;
   }
+  h4{
+    .size{
+      padding: 4px 8px;
+      cursor: pointer;
+      margin: 0 4px;
+  }
+
+   .inactive {
+      background-color: white;
+    }
+    .active {
+      background-color: red;
+      color: white;
+
+    }
+  
+}
 }
 
 `

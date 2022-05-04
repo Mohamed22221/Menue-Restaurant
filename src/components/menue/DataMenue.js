@@ -19,6 +19,7 @@ const DataMenue = [
         type:"pizza",
         name:"Pepperoni Pizza",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
+        allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         img:pizza1,
         price:13.99,
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>]
@@ -29,6 +30,7 @@ const DataMenue = [
         name:"Vegetarian",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pizza2,
+        allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:9.99,
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>,<StarBorderIcon/>]
     },
@@ -38,6 +40,7 @@ const DataMenue = [
         name:"Four Cheese",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pizza3,
+        allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:10.99,
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>]
     },
@@ -47,6 +50,7 @@ const DataMenue = [
         name:"Barbeque Chicken",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pizza4,
+        allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:12.99,
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     }, 
@@ -57,6 +61,7 @@ const DataMenue = [
         name:"Ceaser Salad",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:salad1,
+        allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:10.99,
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>,<StarBorderIcon/>]
     },
@@ -67,6 +72,7 @@ const DataMenue = [
         name:"Sea Food Noodles",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pasta1,
+        allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:12.99,
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>]
     },    
@@ -77,6 +83,7 @@ const DataMenue = [
         name:"Rum With Soda",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:dessert1,
+        allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:5.99,
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>,<StarBorderIcon/>]
     }, 
@@ -86,6 +93,7 @@ const DataMenue = [
         name:"Orange Juice",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:dessert2,
+        allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:6.99,
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     },    
@@ -94,6 +102,7 @@ const DataMenue = [
         type:"dessert",
         name:"Chocolate Cookies",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
+        allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         img:dessert3,
         price:3.99,
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
@@ -103,6 +112,7 @@ const DataMenue = [
         type:"dessert",
         name:"Russian Beer",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
+        allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         img:dessert4,
         price:4.99,
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>]
