@@ -8,6 +8,9 @@ import { AddToCart} from '../../store/SliceCart';
 import { useToasts } from 'react-toast-notifications';
 import { motion } from "framer-motion"
 import { FiHeart } from 'react-icons/fi'
+import HeaderMeal from './HeaderMeal';
+
+
 
 const MealName = ({MenuFilter}) => {
   // params id 
@@ -52,6 +55,7 @@ useEffect(() => {
 
   return (
     <StyleMealName  as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+      <HeaderMeal />
       { DataMenue.filter((item => item.name === ParamsId)).map((item , index) =>{
     return (
       <Container key={item.id} >
@@ -80,6 +84,8 @@ useEffect(() => {
           </h4>
           </About> 
       </RightMeal>
+      
+      
       </StyleItemMeal>
       </Container>
        )
@@ -88,12 +94,13 @@ useEffect(() => {
   )
 }
 const StyleMealName = styled.div`
+
+`
+const StyleItemMeal= styled.div`
 margin: 60px 0;
 @media (max-width:886px ) {
 margin: 30px 0;
 }
-`
-const StyleItemMeal= styled.div`
 display: flex;
 @media (max-width:886px ) {
 flex-direction: column;
@@ -166,9 +173,16 @@ const About= styled.div`
   h3 , h4 , p{
     padding: 10px 0;
   }
+  h3{
+    font-weight: bold;
+  }
   p{
     color: var(--text-color);
     width: 70%;
+    @media (max-width:886px ) {
+      width: 100%; 
+      padding: 14px 0;
+}
   }
   h4{
     .size{
