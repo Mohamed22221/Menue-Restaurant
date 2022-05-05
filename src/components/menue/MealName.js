@@ -60,15 +60,15 @@ useEffect(() => {
           <img src={item.img} />
         </LeftMeal>
         <RightMeal>
-          <div className='title'>
+          <Title >
           <h1>{item.name}</h1>
           <FiHeart className='heart-icon' />
-          </div>
-          <div className='rating'>
+          </Title>
+          <Rating >
           <span>{item.rating}</span>
           <span>(24 ratings)</span>
-          </div> 
-          <div className='about'>
+          </Rating> 
+          <About >
           <h3>${item.price}</h3>
           <p>{item.allDisciption}</p>
           <h4>
@@ -78,7 +78,7 @@ useEffect(() => {
               )
             })} 
           </h4>
-          </div> 
+          </About> 
       </RightMeal>
       </StyleItemMeal>
       </Container>
@@ -89,19 +89,38 @@ useEffect(() => {
 }
 const StyleMealName = styled.div`
 margin: 60px 0;
+@media (max-width:886px ) {
+margin: 30px 0;
+}
 `
 const StyleItemMeal= styled.div`
 display: flex;
+@media (max-width:886px ) {
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
 `
 const LeftMeal= styled.div`
 flex: 1;
 img{
   width: 250px;
 }
+@media (max-width:886px ) {
+  padding-bottom: 20px;
+  img{
+  width: 220px;
+}
+
+}
 `
+
 const RightMeal= styled.div`
 flex: 2;
-.title{
+
+`
+const Title= styled.div`
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -124,9 +143,9 @@ flex: 2;
     opacity: 1;
   }
 }
-}
 
-.rating{
+`
+const Rating= styled.div`
   display: flex;
   align-items: center;
    svg{
@@ -140,9 +159,10 @@ flex: 2;
     margin:0 3px;
     color: var(--text-color);
   }
-}
 
-.about{
+`
+const About= styled.div`
+
   h3 , h4 , p{
     padding: 10px 0;
   }
@@ -167,7 +187,7 @@ flex: 2;
     }
   
 }
-}
+
 
 `
 
