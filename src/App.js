@@ -9,30 +9,44 @@ import { TotalAmount } from "./store/SliceCart";
 import { ToastProvider } from 'react-toast-notifications';
 import Fotter from "./components/fotter/Fotter";
 import MealName from "./components/menue/MealName";
+import PupUp from "./components/glopalComponent/PupUp";
+import { Hide, ShowPopUp } from "./store/StateSlice";
+
 
 function App() {
   const [show , setShow] = useState(false)
+
   const MyItemSelector = useSelector((state) =>state.SliceCart.cartItem )
   const Despatch = useDispatch()
 //show and hide cart
   const HandelHide = () =>{
-    setShow(false)
+    
+    Despatch(Hide())
   }
   const HandelShow = () =>{
+    
     setShow(true)
+
+  }
+  const HandelShowPopUp = () =>{
+    Despatch(ShowPopUp())
+
   }
 // onchange redux store
   useEffect(() => {
     Despatch(TotalAmount())
     }, [MyItemSelector ])
   return (
+    
     <>
+    <button onClick={HandelShowPopUp}>ssssssssssssssssssssssssssssssss</button>
+     <PupUp />
     <ToastProvider 
     autoDismiss
     autoDismissTimeout={4000}
     placement="bottom-right" >
     <BrowserRouter>
-      {show && <Cart HandelHide={HandelHide}/>}
+      <Cart />
       {show &&<OverLay HandelHide={HandelHide} />}
       <Navbar HandelShow={HandelShow} />
       <Routes>

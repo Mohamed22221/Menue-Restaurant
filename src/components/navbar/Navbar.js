@@ -5,20 +5,27 @@ import LogoLight from"../../img/menue/logoo.png"
 import { FaShopify } from 'react-icons/fa';
 import { IoIosSearch } from 'react-icons/io';
 import {  Link } from "react-router-dom";
-import {  useSelector } from "react-redux";
+import {  useDispatch, useSelector } from "react-redux";
+import { ShowCart } from "../../store/StateSlice";
 
 
 const Navbar = ({HandelShow}) => {
   const [toggle, setToggle] = useState(false);
   const linksContainer = useRef();
+  const Dispatch = useDispatch()
   const SelectorTotalAmount = useSelector((state) =>state.SliceCart.cartQuantity)
-
+  //handel toggle navbar
   const handleToggle = () => {
     setToggle(!toggle);
   };
+
   const boxHandler = () => {
     setToggle(false);
   };
+  //show Cart menue
+  const HandelShowMenue = () =>{
+    Dispatch(ShowCart())
+  }
 
 
   return ( 
@@ -28,9 +35,7 @@ const Navbar = ({HandelShow}) => {
     <Container maxWidth="lg">
       <nav>
           <div className="logo">
-          <a onClick={boxHandler} href="#Home"  >
-            <img src={LogoLight} />
-            </a>
+          <a onClick={boxHandler} href="#Home"  ><img src={LogoLight} /></a>
            
         </div>
         <ul ref={linksContainer} className={toggle ? "active" : ""}>
@@ -52,7 +57,7 @@ const Navbar = ({HandelShow}) => {
           </li>
           <li>
             <a onClick={boxHandler}  href="#Teletoken">
-            <FaShopify className="shop" onClick={HandelShow}/>
+            <FaShopify className="shop" onClick={HandelShowMenue}/>
             <span>{SelectorTotalAmount}</span>
             </a>
           </li>

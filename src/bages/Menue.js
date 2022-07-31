@@ -9,6 +9,7 @@ import pizza from"../img/menue/pizza.png"
 import salad from"../img/menue/salad.png" 
 import pasta from"../img/menue/pasta.png" 
 import dessert from"../img/menue/dessert.png" 
+import Customize from '../components/menue/Customize';
 
 const Menue = () => {
   //state data button
@@ -67,6 +68,7 @@ const Menue = () => {
       <HeaderMenue />
       <ButtonMenue stateActive={stateActive} />
       <MenuFilter menueData={menueData}/>
+      <Customize />
     </MenueStyle>
   )
 }

@@ -75,7 +75,7 @@ const MainHeader = styled.div`
         }
         p{
         position: absolute;
-        left: 35%;
+        left: 50%;
         top: 80%;
         transform: translate(-50%);
         z-index:2 ;

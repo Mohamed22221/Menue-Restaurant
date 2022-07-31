@@ -9,7 +9,7 @@ import { useToasts } from 'react-toast-notifications';
 import { motion } from "framer-motion"
 import { FiHeart } from 'react-icons/fi'
 import HeaderMeal from './HeaderMeal';
-
+import { FaShopify } from 'react-icons/fa';
 
 
 const MealName = ({MenuFilter}) => {
@@ -82,6 +82,7 @@ useEffect(() => {
               )
             })} 
           </h4>
+          <button className='button-order'  onClick={ ()=> HandelOrder(item) }>Order<span><FaShopify className='shop'/></span></button>
           </About> 
       </RightMeal>
       
@@ -185,21 +186,46 @@ const About= styled.div`
 }
   }
   h4{
+    margin: 5px 0px 20px;
     .size{
-      padding: 4px 8px;
+      padding: 9px 8px;
       cursor: pointer;
-      margin: 0 4px;
+      margin: 15px 4px;
   }
 
    .inactive {
       background-color: white;
     }
     .active {
-      background-color: red;
+      background-color: var(--red-color);
       color: white;
 
     }
   
+}
+.button-order{
+  
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90px;
+  padding: 6px 20px;
+  background-color: var(--red-color);
+  color: white;
+  border-radius: 4px;
+  transition: 0.5s;
+  cursor: pointer;
+  .shop{
+    transition: 0.5s;
+
+  }
+  &:hover{
+        transition: 0.5s;
+        opacity: 0.6;
+    }
+
+
 }
 
 

@@ -1,7 +1,6 @@
 import React   from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material';
-import StarIcon from '@mui/icons-material/Star';
 import { motion } from "framer-motion"
 import { FaShopify } from 'react-icons/fa';
 import { GoPlusSmall } from 'react-icons/go';

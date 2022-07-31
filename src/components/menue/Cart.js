@@ -5,14 +5,19 @@ import CloseIcon from '@mui/icons-material/Close';
 import ItemCart from './ItemCart';
 import {  useDispatch, useSelector } from 'react-redux';
 import React ,{useEffect} from 'react'
-import { TotalAmount } from '../../store/SliceCart';
+import { Hide } from '../../store/StateSlice';
 
-const Cart = ({HandelHide}) => {
-  const Despatch = useDispatch()
+
+const Cart = () => {
+  const Dispatch = useDispatch()
   const SelectorTotalAmount = useSelector((state) =>state.SliceCart.cartTotalAmount)
+  const CartMenue = useSelector((state) => state.ShowAndHide.value.cartmeue)
+  const HandelHide = () =>{
+    Dispatch(Hide())
+  }
 
   return (
-    <StyleMainCart  as={motion.div} animate={{ opacity: 4 }}>
+    <StyleMainCart CartMenue={CartMenue}  >
       <MainCart  >
         <div className='header-cart'>
           <h1>YOUR CART</h1>
@@ -35,11 +40,10 @@ transition :0.4s;
 position: fixed;
 top: 0;
 bottom: 0;
-right: 0px;
 width: 600px;
 background-color: white;
 z-index: 1000;
-opacity: 0;
+right: ${(props) => props.CartMenue === false ? "-800px" : "0"};
 
 @media (max-width:700px) {
   width: 100%;

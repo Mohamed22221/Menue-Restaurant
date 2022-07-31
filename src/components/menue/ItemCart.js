@@ -106,15 +106,20 @@ border-bottom:2px dotted var(--text-color) ;
     align-items: center;
     h1{
       padding-left: 5px;
-     font-size:16px ;
+     font-size:15px ;
      font-weight: bold;
+     color: black;
+     transition: 0.5s;
      @media (max-width:350px ) {
      font-size:14px ;
+    }
+    :hover{
+      color: var(--primary);
     }
     }
    span{
      margin-left: 6px;
-     font-size: 15px;
+     font-size: 14px;
      color: var(--text-color);
    }
     img{
