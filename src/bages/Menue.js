@@ -68,7 +68,7 @@ const Menue = () => {
       <HeaderMenue />
       <ButtonMenue stateActive={stateActive} />
       <MenuFilter menueData={menueData}/>
-      <Customize />
+      <Customize menueData={menueData} />
     </MenueStyle>
   )
 }

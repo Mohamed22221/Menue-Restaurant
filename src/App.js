@@ -14,24 +14,8 @@ import { Hide, ShowPopUp } from "./store/StateSlice";
 
 
 function App() {
-  const [show , setShow] = useState(false)
-
   const MyItemSelector = useSelector((state) =>state.SliceCart.cartItem )
   const Despatch = useDispatch()
-//show and hide cart
-  const HandelHide = () =>{
-    
-    Despatch(Hide())
-  }
-  const HandelShow = () =>{
-    
-    setShow(true)
-
-  }
-  const HandelShowPopUp = () =>{
-    Despatch(ShowPopUp())
-
-  }
 // onchange redux store
   useEffect(() => {
     Despatch(TotalAmount())
@@ -39,7 +23,6 @@ function App() {
   return (
     
     <>
-    <button onClick={HandelShowPopUp}>ssssssssssssssssssssssssssssssss</button>
      <PupUp />
     <ToastProvider 
     autoDismiss
@@ -47,8 +30,8 @@ function App() {
     placement="bottom-right" >
     <BrowserRouter>
       <Cart />
-      {show &&<OverLay HandelHide={HandelHide} />}
-      <Navbar HandelShow={HandelShow} />
+      <OverLay  />
+      <Navbar  />
       <Routes>
       <Route path="/" element={<Menue/> } />
       <Route path="Menue-Restaurant" element={<Menue/>} />

@@ -1,27 +1,38 @@
-import React   from 'react'
+import React, { useState }   from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material';
 import { motion } from "framer-motion"
 import { FaShopify } from 'react-icons/fa';
 import { GoPlusSmall } from 'react-icons/go';
-import { useDispatch } from 'react-redux';
-import { AddToCart} from '../../store/SliceCart';
+import { useDispatch, useSelector } from 'react-redux';
+import { AddToCart, ShowItemid} from '../../store/SliceCart';
 import {  useToasts } from 'react-toast-notifications';
 import {  Link } from "react-router-dom";
+import { ShowPopUp } from '../../store/StateSlice';
 
 const MenuFilter = ({menueData}) => {
     // sliceCart dispatch 
-    const Despatch = useDispatch()
+    const Dispatch = useDispatch()
+    const [item1 , setItem1] = useState([])
+
     const { addToast } = useToasts();
+    const OpenCustomize = (item) =>{
+        Dispatch(ShowPopUp())
+        Dispatch(ShowItemid({...item}))  
+        
+    }
+    
+    /*
     const HandelOrder = (item) =>{
         Despatch(AddToCart(item))
         addToast(`${item.name} Added To Cart`, { appearance: 'success' });
     }
+    */
   return (
     <StyleFilterMenue>
         <Container maxWidth="lg">
         <MainMenue>
-            {menueData.map((item)=>{
+            {menueData.map((item , index)=>{
                 return (
                 <ItemMenue  key={item.id} as={motion.div} initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -38,8 +49,8 @@ const MenuFilter = ({menueData}) => {
                     {item.rating}
                   </div>
                   <div className='button-order'>
-                      <button className='first-button'  onClick={ ()=> HandelOrder(item) }>Customize<span><GoPlusSmall className='shop'/></span></button>
-                    <Link to={`/meal/${item.name}`} > <button >Order<span><FaShopify className='shop'/></span></button></Link>
+                      <button className='first-button'  onClick={ () =>  OpenCustomize(item) }>Customize<span><GoPlusSmall className='shop'/></span></button>
+                    <Link to={`/meal/${item.id}`} > <button >Order<span><FaShopify className='shop'/></span></button></Link>
                  </div>  
 
                 </ItemMenue>

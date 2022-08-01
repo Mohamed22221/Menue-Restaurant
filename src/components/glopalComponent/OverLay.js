@@ -28,7 +28,7 @@ height: 100%;
 background-color: black;
 z-index: 999;
 transition :0.6s;
-opacity: ${(props) => props.overLays === false ? "0": "0.5"};
+opacity: ${(props) => props.overLays === false ? "0": "0.4"};
 visibility:${(props) => props.overLays === false ?"hidden" : "visible"} ;
 
 `

@@ -41,11 +41,11 @@ const ItemCart = ({HandelHide }) => {
         </div>
         </div>
         /*loop slicecart redux */
-        :  MyItemSelector.map((item)=>{
+        :  MyItemSelector.map((item , index)=>{
             return (
               
-                <ItemOneCart key={item.id} >
-                  <Link to={`/meal/${item.name}`} onClick={HandelHide} >
+                <ItemOneCart key={index} >
+                  <Link to={`/meal/${item.id}`} onClick={HandelHide} >
                 <div className='img'>
                 <img src={item.img}/>
                 <h1>{item.name}</h1>

@@ -15,7 +15,7 @@ import StarHalfIcon from '@mui/icons-material/StarHalf';
 const DataMenue = [
 // data pizza-------   
     {
-        id:1,
+        id:"1",
         type:"pizza",
         name:"Pepperoni Pizza",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
@@ -25,7 +25,7 @@ const DataMenue = [
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>]
     },
     {
-        id:2,
+        id:"2",
         type:"pizza",
         name:"Vegetarian",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
@@ -35,7 +35,7 @@ const DataMenue = [
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>,<StarBorderIcon/>]
     },
     {
-        id:3,
+        id:"3",
         type:"pizza",
         name:"Four Cheese",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
@@ -45,7 +45,7 @@ const DataMenue = [
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>]
     },
     {
-        id:4,
+        id:"4",
         type:"pizza",
         name:"Barbeque Chicken",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
@@ -56,7 +56,7 @@ const DataMenue = [
     }, 
 // data salad------- 
     {
-        id:5,
+        id:"5",
         type:"salad",
         name:"Ceaser Salad",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
@@ -67,7 +67,7 @@ const DataMenue = [
     },
 // data pasta-------       
     {
-        id:6,
+        id:"6",
         type:"pasta",
         name:"Sea Food Noodles",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
@@ -78,7 +78,7 @@ const DataMenue = [
     },    
 // data dessert-------  
     {
-        id:7,
+        id:"7",
         type:"dessert",
         name:"Rum With Soda",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
@@ -88,7 +88,7 @@ const DataMenue = [
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>,<StarBorderIcon/>]
     }, 
     {
-        id:8,
+        id:"8",
         type:"dessert",
         name:"Orange Juice",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
@@ -98,7 +98,7 @@ const DataMenue = [
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     },    
     {
-        id:9,
+        id:"9",
         type:"dessert",
         name:"Chocolate Cookies",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
@@ -108,7 +108,7 @@ const DataMenue = [
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     }, 
     {
-        id:10,
+        id:"10",
         type:"dessert",
         name:"Russian Beer",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",

@@ -56,10 +56,10 @@ useEffect(() => {
   return (
     <StyleMealName  as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
       <HeaderMeal />
-      { DataMenue.filter((item => item.name === ParamsId)).map((item , index) =>{
+      { DataMenue.filter(((item , index) => item.id === ParamsId)).map((item , index) =>{
     return (
-      <Container key={item.id} >
-      <StyleItemMeal key={item.id} >
+      <Container key={index} >
+      <StyleItemMeal key={index} >
         <LeftMeal>
           <img src={item.img} />
         </LeftMeal>
