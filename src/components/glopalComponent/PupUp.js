@@ -41,6 +41,7 @@ color: black;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    border-radius: 0px;
 }
 }
 
