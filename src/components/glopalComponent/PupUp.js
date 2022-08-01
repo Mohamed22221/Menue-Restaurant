@@ -25,7 +25,7 @@ width: 550px;
 height: 580px;
 position: fixed;
 transition: 0.4s;
-top: ${(props) => props.PopUpShow === false ? "-50% ": "50%"};
+top: ${(props) => props.PopUpShow === false ? "-70% ": "50%"};
 left: 50%;
 transform: translate(-50% , -50%);
 background-color: white;
@@ -34,6 +34,14 @@ box-shadow: 0px 0px 15px 0px rgba(135,135,135,0.75);
 -webkit-box-shadow: 0px 0px 15px 0px rgba(135,135,135,0.75);
 -moz-box-shadow: 0px 0px 15px 0px rgba(135,135,135,0.75);
 color: black;
+@media (max-width: 680px) {
+  width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
 }
 
 `

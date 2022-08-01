@@ -19,6 +19,7 @@ const MealName = ({MenuFilter}) => {
   //add item to cart
   const Despatch = useDispatch()
   const { addToast } = useToasts();
+  
   const HandelOrder = (item) =>{
       Despatch(AddToCart(item))
       addToast(`${item.name} Added To Cart`, { appearance: 'success' });

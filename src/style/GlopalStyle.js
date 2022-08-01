@@ -5,7 +5,7 @@ const GlopalStyle = createGlobalStyle`
     --primary: #F39200;
     --gold-color:#ffa80a;
     --nav-color:#1d2228;
-    --text-color:#898787cc;
+    --text-color:#828282;
     --red-color: #ed4e53;
     --border-color: #2e344e;
 } 

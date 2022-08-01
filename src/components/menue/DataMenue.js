@@ -22,6 +22,8 @@ const DataMenue = [
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         img:pizza1,
         price:13.99,
+        size:`11"`,
+        addition:"Pepperoni",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>]
     },
     {
@@ -32,6 +34,8 @@ const DataMenue = [
         img:pizza2,
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:9.99,
+        size:`11"`,
+        addition:"red chilli",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>,<StarBorderIcon/>]
     },
     {
@@ -42,6 +46,8 @@ const DataMenue = [
         img:pizza3,
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:10.99,
+        size:`11"`,
+        addition:"Parmesan cheese",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>]
     },
     {
@@ -52,6 +58,8 @@ const DataMenue = [
         img:pizza4,
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:12.99,
+        size:`26 × 26 × 5.5 cm"`,
+        addition:"carrots , tomatoes",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     }, 
 // data salad------- 
@@ -63,6 +71,9 @@ const DataMenue = [
         img:salad1,
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:10.99,
+        size:`11"`,
+        addition:"Parmesan cheese",
+        addition:"carrots , tomatoes  spring greens",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>,<StarBorderIcon/>]
     },
 // data pasta-------       
@@ -74,6 +85,8 @@ const DataMenue = [
         img:pasta1,
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:12.99,
+        size:`11"`,
+        addition:"spring greens",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>]
     },    
 // data dessert-------  
@@ -85,6 +98,8 @@ const DataMenue = [
         img:dessert1,
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:5.99,
+        size:`11"`,
+        addition:"spring greens",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>,<StarBorderIcon/>]
     }, 
     {
@@ -95,6 +110,8 @@ const DataMenue = [
         img:dessert2,
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:6.99,
+        size:`11"`,
+        addition:"There is no addition",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     },    
     {
@@ -105,6 +122,8 @@ const DataMenue = [
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         img:dessert3,
         price:3.99,
+        size:`11"`,
+        addition:"Classic marinara sauce,authentic old-world pepperoni,...",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     }, 
     {
@@ -115,6 +134,8 @@ const DataMenue = [
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         img:dessert4,
         price:4.99,
+        size:`11"`,
+        addition:"authentic old-world pepperoni,...",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarHalfIcon/>]
     },    
    
