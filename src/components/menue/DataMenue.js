@@ -123,7 +123,7 @@ const DataMenue = [
         img:dessert3,
         price:3.99,
         size:`11"`,
-        addition:"Classic marinara sauce,authentic old-world pepperoni,...",
+        addition:"Classic marinara sauce,...",
         rating:[<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarIcon/>,<StarBorderIcon/>]
     }, 
     {

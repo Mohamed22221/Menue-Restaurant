@@ -48,9 +48,26 @@ const ItemCart = ({HandelHide }) => {
                   <Link to={`/meal/${item.id}`} onClick={HandelHide} >
                 <div className='img'>
                 <img src={item.img}/>
+
+                </div>
+                <div className='main-meal'>
+                <div className='meal meal1'>
                 <h1>{item.name}</h1>
                 <span>x{item.quantityUp}</span>
+
                 </div>
+                <div className='meal meal2'>
+                <h1>Size : </h1>
+                <span>{item.size}</span>
+
+                </div>
+                <div className='meal meal2'>
+                <h1>addition : </h1>
+                <span>{item.addition}</span>
+
+                </div>
+                </div>
+                
                 </Link>
                 <div className='quantity'>
                   <IoIosArrowUp className='icon-quantity' onClick={() => HandelIncrese(item)}  />
@@ -74,6 +91,12 @@ const StyleItemCart = styled.div`
 flex: 1;
 padding: 20px;
 overflow-y: auto;
+a{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 &::-webkit-scrollbar{
   width:0px;
 }
@@ -101,32 +124,55 @@ a{
 const ItemOneCart = styled.div`
 padding: 20px 0;
 border-bottom:2px dotted var(--text-color) ;
+.main-meal{
+
+
+.meal{
+  display: flex;
+  align-items: center;
+  
+  h1{
+    padding: 1px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    transition: 0.5s;
+    &:hover{
+      color: var(--primary);
+    }
+    @media (max-width:390px ) {
+     font-size:12px ;
+    }
+  }
+  span{
+     margin-left: 6px;
+     font-size: 12px;
+     color: var(--text-color);
+     @media (max-width:390px ) {
+     font-size:11px ;
+    }
+   }
+
+}
+
+}
+
 .img{
     display: flex;
     align-items: center;
     h1{
       padding-left: 5px;
      font-size:15px ;
-     font-weight: bold;
-     color: black;
-     transition: 0.5s;
-     @media (max-width:350px ) {
-     font-size:14px ;
+     
+
+
     }
-    :hover{
-      color: var(--primary);
-    }
-    }
-   span{
-     margin-left: 6px;
-     font-size: 14px;
-     color: var(--text-color);
-   }
+
     img{
     width:80px;
-    padding-right: 4px;
-    @media (max-width:360px ) {
-     width:70px
+    padding-right: 2px;
+    @media (max-width:390px ) {
+     width:62px
     }
 }
     }
@@ -139,8 +185,8 @@ justify-content: space-between;
 align-items: center;
 .price{
  font-weight: 800;
- @media (max-width:350px ) {
-     font-size:14px ;
+ @media (max-width:380px ) {
+     font-size:13px ;
     }
 }
 .close-icon{
