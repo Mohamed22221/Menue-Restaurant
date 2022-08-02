@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Menue-Restaurant/static/css/main.c69c4983.css",
-    "main.js": "/Menue-Restaurant/static/js/main.1ecc8388.js",
+    "main.js": "/Menue-Restaurant/static/js/main.6ff5a3f3.js",
     "static/media/gif.mp4": "/Menue-Restaurant/static/media/gif.e4b5e3462a7f0db4f3aa.mp4",
     "static/media/background.jpg": "/Menue-Restaurant/static/media/background.1407ff3348c88a7c9f5d.jpg",
     "static/media/subheader.jpg": "/Menue-Restaurant/static/media/subheader.44914aa252526a1cb50e.jpg",
-    "static/media/bgloading.jpeg": "/Menue-Restaurant/static/media/bgloading.89ae3910b3e8ae82f632.jpeg",
     "static/media/pizza1.png": "/Menue-Restaurant/static/media/pizza1.3d98648533bdf51812b4.png",
     "static/media/pizza3.png": "/Menue-Restaurant/static/media/pizza3.e5ec3734b481b87612b0.png",
     "static/media/pizza4.png": "/Menue-Restaurant/static/media/pizza4.e5ec3734b481b87612b0.png",
+    "static/media/bgloading.jpeg": "/Menue-Restaurant/static/media/bgloading.6b97c34bb346dc14dada.jpeg",
     "static/media/pasta1.png": "/Menue-Restaurant/static/media/pasta1.717b4ee62eecb4d3b859.png",
     "static/media/pizza2.png": "/Menue-Restaurant/static/media/pizza2.d97a3c94a903476a9ae5.png",
     "static/media/disert3.png": "/Menue-Restaurant/static/media/disert3.005045e6ac98b1210894.png",
@@ -21,10 +21,10 @@
     "static/media/pizza.png": "/Menue-Restaurant/static/media/pizza.e36c8977e5912b806741.png",
     "index.html": "/Menue-Restaurant/index.html",
     "main.c69c4983.css.map": "/Menue-Restaurant/static/css/main.c69c4983.css.map",
-    "main.1ecc8388.js.map": "/Menue-Restaurant/static/js/main.1ecc8388.js.map"
+    "main.6ff5a3f3.js.map": "/Menue-Restaurant/static/js/main.6ff5a3f3.js.map"
   },
   "entrypoints": [
     "static/css/main.c69c4983.css",
-    "static/js/main.1ecc8388.js"
+    "static/js/main.6ff5a3f3.js"
   ]
 }
