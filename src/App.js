@@ -11,6 +11,7 @@ import Fotter from "./components/fotter/Fotter";
 import MealName from "./components/menue/MealName";
 import PupUp from "./components/glopalComponent/PupUp";
 import { Hide, ShowPopUp } from "./store/StateSlice";
+import Loading from "./components/glopalComponent/Loading";
 
 
 function App() {
@@ -20,9 +21,17 @@ function App() {
   useEffect(() => {
     Despatch(TotalAmount())
     }, [MyItemSelector ])
+
+    const [loader, setLoader] = useState(true);
+    useEffect(()=>{
+      setTimeout(() => {
+        setLoader(false);
+      }, 4500);
+    },[])
   return (
     
     <>
+    {loader && <Loading/>}
      <PupUp />
     <ToastProvider 
     autoDismiss
