@@ -26,16 +26,13 @@ const Menue = () => {
   }
 
   return (
-    <MenueStyle>
+    <>
       <HeaderMenue />
       <ButtonMenue  FilterButton={FilterButton}  />
       <MenuFilter menueData={menueData}/>
       <Customize menueData={menueData} />
-    </MenueStyle>
+    </>
   )
 }
-const MenueStyle = styled.div`
 
-
-`
 export default Menue

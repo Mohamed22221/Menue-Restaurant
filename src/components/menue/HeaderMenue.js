@@ -7,7 +7,7 @@ const HeaderMenue = () => {
   return (
     <MenueHederStyle>
         <MainHeader>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
           <h1><span>Our</span> Menu</h1>
           <div className='icon-star'>
           <StarIcon/>

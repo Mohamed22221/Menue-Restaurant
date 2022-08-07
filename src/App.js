@@ -12,6 +12,7 @@ import MealName from "./components/menue/MealName";
 import PupUp from "./components/glopalComponent/PupUp";
 import { Hide, ShowPopUp } from "./store/StateSlice";
 import Loading from "./components/glopalComponent/Loading";
+import Home from "./bages/Home";
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
   return (
     
     <>
-    {loader && <Loading/>}
+    {/* {loader && <Loading/>}*/}
      <PupUp />
     <ToastProvider 
     autoDismiss
@@ -44,6 +45,8 @@ function App() {
       <Routes>
       <Route path="/" element={<Menue/> } />
       <Route path="Menue-Restaurant" element={<Menue/>} />
+      <Route path="home" element={<Home/>} />
+
       <Route path="/meal" element={<MealName />} >
       <Route path=":mealId" element={<MealName/>} />
       </Route>

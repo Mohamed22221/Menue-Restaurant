@@ -70,19 +70,23 @@ display: flex;
 justify-content: space-between;
 flex-wrap: wrap;
 align-items: center;
+
 @media (max-width:656px) {
 justify-content: center;
 align-items: center;
 }
 `
 const ItemMenue = styled.div`
-width: 300px;
-padding: 40px 0;
+width: 330px;
+padding: 40px 20px;
+margin: 10px 0;
 display: flex;
 flex-direction: column;
 align-items: center;
 text-align: center;
 transition: 0.4s;
+box-shadow: 0 3px 24px 0 rgb(25 31 33 / 5%);
+
 @media (max-width:656) {
     width: 100%;
 }
