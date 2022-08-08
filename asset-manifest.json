@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/Menue-Restaurant/static/css/main.ff63a68c.css",
-    "main.js": "/Menue-Restaurant/static/js/main.778f0b37.js",
+    "main.css": "/Menue-Restaurant/static/css/main.6ac28723.css",
+    "main.js": "/Menue-Restaurant/static/js/main.a6b260c8.js",
     "static/media/gif.mp4": "/Menue-Restaurant/static/media/gif.e4b5e3462a7f0db4f3aa.mp4",
     "static/media/background.jpg": "/Menue-Restaurant/static/media/background.1407ff3348c88a7c9f5d.jpg",
     "static/media/subheader.jpg": "/Menue-Restaurant/static/media/subheader.44914aa252526a1cb50e.jpg",
+    "static/media/pizza.png": "/Menue-Restaurant/static/media/pizza.e36c8977e5912b806741.png",
     "static/media/pizza1.png": "/Menue-Restaurant/static/media/pizza1.3d98648533bdf51812b4.png",
     "static/media/pizza3.png": "/Menue-Restaurant/static/media/pizza3.e5ec3734b481b87612b0.png",
     "static/media/pizza4.png": "/Menue-Restaurant/static/media/pizza4.e5ec3734b481b87612b0.png",
@@ -19,17 +20,16 @@
     "static/media/disert4.png": "/Menue-Restaurant/static/media/disert4.99fcf9c385f2b5bab059.png",
     "static/media/disert1.png": "/Menue-Restaurant/static/media/disert1.ad507fd17f0840cbdcf2.png",
     "static/media/dessert.png": "/Menue-Restaurant/static/media/dessert.aa727cf11a082e0c1bea.png",
-    "static/media/pizza.png": "/Menue-Restaurant/static/media/pizza.e36c8977e5912b806741.png",
     "static/media/slick.svg": "/Menue-Restaurant/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/Menue-Restaurant/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/Menue-Restaurant/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Menue-Restaurant/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Menue-Restaurant/index.html",
-    "main.ff63a68c.css.map": "/Menue-Restaurant/static/css/main.ff63a68c.css.map",
-    "main.778f0b37.js.map": "/Menue-Restaurant/static/js/main.778f0b37.js.map"
+    "main.6ac28723.css.map": "/Menue-Restaurant/static/css/main.6ac28723.css.map",
+    "main.a6b260c8.js.map": "/Menue-Restaurant/static/js/main.a6b260c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff63a68c.css",
-    "static/js/main.778f0b37.js"
+    "static/css/main.6ac28723.css",
+    "static/js/main.a6b260c8.js"
   ]
 }
