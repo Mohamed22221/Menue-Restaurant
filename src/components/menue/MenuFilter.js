@@ -51,7 +51,7 @@ const MenuFilter = ({menueData}) => {
                   </div>
                   <div className='button-order'>
                       <button className='first-button'  onClick={ () =>  OpenCustomize(item) }>Customize<span><GoPlusSmall className='shop'/></span></button>
-                      <ButtonOrder item={item} />
+                      <ButtonOrder item={`/meal/${item.id}`} title="Order" />
                  </div>  
 
                 </ItemMenue>

@@ -61,10 +61,7 @@ const HandelHideOrder =() =>{
 }
 const MainCustomize = styled.div`
 padding: 15px;
-@media (max-width: 680px) {
 
-  
-}
 //img style
 .img{
   display: flex;
@@ -90,7 +87,7 @@ padding: 15px;
       padding: 7px 0;
       color: var(--text-color);
       font-size: 15px;
-      
+      letter-spacing: 0;
     }
   }
 }

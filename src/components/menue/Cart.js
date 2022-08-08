@@ -40,12 +40,12 @@ transition :0.4s;
 position: fixed;
 top: 0;
 bottom: 0;
-width: 600px;
+width: 750px;
 background-color: white;
 z-index: 1000;
-right: ${(props) => props.CartMenue === false ? "-800px" : "0"};
+right: ${(props) => props.CartMenue === false ? "-1000px" : "0"};
 
-@media (max-width:700px) {
+@media (max-width:1000px) {
   width: 100%;
 }
 `

@@ -48,15 +48,15 @@ const HeadSlider = ({ DataMenue }) => {
                       <div className='cheese'>
                         <img src={cheese} />
                         <div className='about'>
-                          <h4>480</h4>
+                          <h4>120g</h4>
                           <p>Mozarella</p>
                         </div>
                       </div>
 
                     </div>
                     <div className='fotter-slider1'>
-                        <ButtonOrder item={item}/>
-                        <h2>{item.price}$</h2>
+                    <ButtonOrder item={`/meal/${item.id}`} title="Order" />
+                      <h2>{item.price}$</h2>
                     </div>
                   </div>
                   <div className='col-slider'>

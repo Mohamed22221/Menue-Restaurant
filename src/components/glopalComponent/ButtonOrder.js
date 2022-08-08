@@ -2,11 +2,14 @@ import React from 'react'
 import { FaShopify } from 'react-icons/fa';
 import {  Link } from "react-router-dom";
 
-const ButtonOrder = ({item}) => {
+const ButtonOrder = ({item , title}) => {
   return (
-   
-   <Link to={`/meal/${item.id}`} className="order" ><button >Order<span><FaShopify className='shop'/></span></button></Link>
-   
+   <Link to={item} className="order" >
+    <button >
+      {title}
+      <span> <FaShopify className='shop'/></span>
+    </button>
+    </Link>
   )
 }
 
