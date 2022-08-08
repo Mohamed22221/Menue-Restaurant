@@ -1,7 +1,31 @@
+%Flex-center {
+ display: flex;
+ align-items: center;
+ @media (max-width:768px) {
+  justify-content: center;
+ }
+}
+.main-header-slider{
+ position: relative;
+.bg-photo{
+ position: absolute;
+ left: -120px;
+ top: 100px;
+ width: 320px;
+ z-index: 0;
+ opacity: 0.1;
+ filter: opacity(0.5);
+ @media (max-width:768px) {
+  width: 250px;
+  
+ }
+}
+
+ 
 .slider{
  overflow: hidden;
  position: relative;
-
+ 
 .row-slider{
  display: flex;
  justify-content: space-between;
@@ -38,23 +62,18 @@
   p{
    width: 350px;
    color: var(--text-color);
-
+   
    padding: 10px 0;
    font-size: 15px;
   }
   .main-about{
-   display: flex;
-   align-items: center;
-   @media (max-width:768px) {
-    justify-content: center;
-   }
+@extend %Flex-center;
    margin: 18px 0;
 
   }
   .calory , .cheese{
    margin: 0px 10;
-   display: flex;
-   align-items: center;
+   @extend %Flex-center;
    img{
     width: 38px;
    }
@@ -90,16 +109,13 @@
   }
  }
  .item-row-slider2{
-  display: flex;
-  align-items: center;
+  @extend %Flex-center;
   justify-content: space-evenly;
-
   .img{
    img{
     width: 150px;
     transition: .3s;
    }
-   
   }
   h5{
    
@@ -111,6 +127,12 @@
   }
  }
 }
+.fotter-slider1{
+ @extend %Flex-center;
+ h2{
+  margin-left: 20px;
+ }
+}
 }
 
-
+}

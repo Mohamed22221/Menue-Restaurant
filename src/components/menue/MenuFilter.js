@@ -9,6 +9,7 @@ import { AddToCart, ShowItemid} from '../../store/SliceCart';
 import {  useToasts } from 'react-toast-notifications';
 import {  Link } from "react-router-dom";
 import { ShowPopUp } from '../../store/StateSlice';
+import ButtonOrder from '../glopalComponent/ButtonOrder';
 
 const MenuFilter = ({menueData}) => {
     // sliceCart dispatch 
@@ -50,7 +51,7 @@ const MenuFilter = ({menueData}) => {
                   </div>
                   <div className='button-order'>
                       <button className='first-button'  onClick={ () =>  OpenCustomize(item) }>Customize<span><GoPlusSmall className='shop'/></span></button>
-                    <Link to={`/meal/${item.id}`} > <button >Order<span><FaShopify className='shop'/></span></button></Link>
+                      <ButtonOrder item={item} />
                  </div>  
 
                 </ItemMenue>
@@ -161,7 +162,7 @@ box-shadow: 0 3px 24px 0 rgb(25 31 33 / 5%);
         color: black;
         background-color: white;
         border: 1px solid var(--text-color);
-        padding: 6px 18px;
+        
         
     }
 
