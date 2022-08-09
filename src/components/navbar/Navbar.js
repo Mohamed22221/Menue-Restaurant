@@ -41,12 +41,12 @@ const Navbar = ({HandelShow}) => {
         <ul ref={linksContainer} className={toggle ? "active" : ""}>
           <li>
             
-            <Link onClick={boxHandler} to="/home"  >
+            <Link onClick={boxHandler} to="/Menue-Restaurant"  >
               Home
             </Link>
           </li>
           <li>
-            <Link onClick={boxHandler} to='/Menue-Restaurant' >
+            <Link onClick={boxHandler} to='/menu' >
               Menu
             </Link>
           </li>

@@ -37,7 +37,7 @@ const ItemCart = ({HandelHide }) => {
         <h3 className='empty-text'>cart item empty</h3>
         <div className='go-shoping'>
         <BsFillArrowLeftCircleFill />
-        <Link to='/Menue-Restaurant' onClick={HandelHide}>Go To Menu</Link> 
+        <Link to='/menu' onClick={HandelHide}>Go To Menu</Link> 
         </div>
         </div>
         /*loop slicecart redux */

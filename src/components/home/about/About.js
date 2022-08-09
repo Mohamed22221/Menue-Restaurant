@@ -21,7 +21,7 @@ const About = () => {
       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
       </p>
       <img src={Signature} />
-      <ButtonOrder item={`/Menue-Restaurant`} title="CHECK OUR MENU" />
+      <ButtonOrder item={`/menu`} title="CHECK OUR MENU" />
     </div>
     </div>
    </Container>

@@ -10,9 +10,11 @@ import {  useToasts } from 'react-toast-notifications';
 import {  Link } from "react-router-dom";
 import { ShowPopUp } from '../../store/StateSlice';
 import ButtonOrder from '../glopalComponent/ButtonOrder';
+import { transform } from "framer-motion"
 
 const MenuFilter = ({menueData}) => {
     // sliceCart dispatch 
+    const transformer = transform([0, 100], [0, 360])
     const Dispatch = useDispatch()
     const [item1 , setItem1] = useState([])
 
@@ -35,9 +37,10 @@ const MenuFilter = ({menueData}) => {
         <MainMenue>
             {menueData.map((item , index)=>{
                 return (
-                <ItemMenue  key={item.id} as={motion.div} initial={{ opacity: 0 }}
+                <ItemMenue  key={item.id} as={motion.div} initial={{ opacity: 0 } }
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}>
+                viewport={{ once: true }}
+                ttransition={{ duration: 2 }}r>
                   <div className='img-menue'>
                       <img src={item.img}/>
                   </div>

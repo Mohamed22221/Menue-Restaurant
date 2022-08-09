@@ -44,8 +44,8 @@ function App() {
       <Navbar  />
       <Routes>
       <Route path="/" element={<Menue/> } />
-      <Route path="Menue-Restaurant" element={<Menue/>} />
-      <Route path="home" element={<Home/>} />
+      <Route path="menu" element={<Menue/>} />
+      <Route path="Menue-Restaurant" element={<Home/>} />
 
       <Route path="/meal" element={<MealName />} >
       <Route path=":mealId" element={<MealName/>} />

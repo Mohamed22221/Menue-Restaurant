@@ -11,7 +11,7 @@ const HeaderMeal = () => {
         <MainHeader>
       <Container maxWidth="lg">
           <h1><span>Menu Item </span> v1</h1>
-            <p><Link  to='/Menue-Restaurant' >Menu</Link> <span>/ Menu Item v1</span></p> 
+            <p><Link  to='/menu' >Menu</Link> <span>/ Menu Item v1</span></p> 
           <div className='icon-star'>
           <StarIcon/>
           <StarIcon/>
