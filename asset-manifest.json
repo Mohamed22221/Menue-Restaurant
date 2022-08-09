@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/Menue-Restaurant/static/css/main.ce0a6100.css",
-    "main.js": "/Menue-Restaurant/static/js/main.f031647c.js",
+    "main.css": "/Menue-Restaurant/static/css/main.3d01b9f6.css",
+    "main.js": "/Menue-Restaurant/static/js/main.e51b32f6.js",
     "static/media/gif.mp4": "/Menue-Restaurant/static/media/gif.e4b5e3462a7f0db4f3aa.mp4",
     "static/media/auth.jpg": "/Menue-Restaurant/static/media/auth.201f3c3c0cdb632cd2cf.jpg",
+    "static/media/bg-home.jpg": "/Menue-Restaurant/static/media/bg-home.12eb3e251fd1298076a4.jpg",
     "static/media/background.jpg": "/Menue-Restaurant/static/media/background.1407ff3348c88a7c9f5d.jpg",
     "static/media/subheader.jpg": "/Menue-Restaurant/static/media/subheader.44914aa252526a1cb50e.jpg",
+    "static/media/12.png": "/Menue-Restaurant/static/media/12.3dee33834d5ec7192923.png",
     "static/media/pizza.png": "/Menue-Restaurant/static/media/pizza.e36c8977e5912b806741.png",
     "static/media/pizza1.png": "/Menue-Restaurant/static/media/pizza1.3d98648533bdf51812b4.png",
     "static/media/pizza3.png": "/Menue-Restaurant/static/media/pizza3.e5ec3734b481b87612b0.png",
@@ -14,6 +16,7 @@
     "static/media/pasta1.png": "/Menue-Restaurant/static/media/pasta1.717b4ee62eecb4d3b859.png",
     "static/media/pizza2.png": "/Menue-Restaurant/static/media/pizza2.d97a3c94a903476a9ae5.png",
     "static/media/disert3.png": "/Menue-Restaurant/static/media/disert3.005045e6ac98b1210894.png",
+    "static/media/2.png": "/Menue-Restaurant/static/media/2.14bdb83149d58bec762e.png",
     "static/media/salad1.png": "/Menue-Restaurant/static/media/salad1.ec46b1b8766ab2b5e332.png",
     "static/media/calories.png": "/Menue-Restaurant/static/media/calories.ed71c63c719fa0fea547.png",
     "static/media/disert2.png": "/Menue-Restaurant/static/media/disert2.bc866de31f6686bc272a.png",
@@ -26,11 +29,11 @@
     "static/media/slick.ttf": "/Menue-Restaurant/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Menue-Restaurant/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Menue-Restaurant/index.html",
-    "main.ce0a6100.css.map": "/Menue-Restaurant/static/css/main.ce0a6100.css.map",
-    "main.f031647c.js.map": "/Menue-Restaurant/static/js/main.f031647c.js.map"
+    "main.3d01b9f6.css.map": "/Menue-Restaurant/static/css/main.3d01b9f6.css.map",
+    "main.e51b32f6.js.map": "/Menue-Restaurant/static/js/main.e51b32f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce0a6100.css",
-    "static/js/main.f031647c.js"
+    "static/css/main.3d01b9f6.css",
+    "static/js/main.e51b32f6.js"
   ]
 }
