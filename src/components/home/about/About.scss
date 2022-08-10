@@ -4,6 +4,8 @@
  align-items: center;
  justify-content: center;
  flex-wrap: wrap;
+ background-image: url("../../../img/home/pattern.jpg");
+ background-size: cover;
  @media (max-width:943px) {
   padding: 30px 0;
  }

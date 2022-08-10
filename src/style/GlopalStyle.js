@@ -19,6 +19,8 @@ const GlopalStyle = createGlobalStyle`
 }
 body{
     font-family: 'Oswald', sans-serif;
+    height: 100vh;
+    z-index: 100;
 
 }
 p{
