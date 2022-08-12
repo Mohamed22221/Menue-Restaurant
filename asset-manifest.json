@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/Menue-Restaurant/static/css/main.1c128e46.css",
-    "main.js": "/Menue-Restaurant/static/js/main.44ccb12f.js",
+    "main.css": "/Menue-Restaurant/static/css/main.8d90138d.css",
+    "main.js": "/Menue-Restaurant/static/js/main.145a2f3e.js",
+    "static/media/bg-perpony.jpg": "/Menue-Restaurant/static/media/bg-perpony.f3ab1a1d6a1e5d35dc31.jpg",
+    "static/media/bg-parpicue.jpg": "/Menue-Restaurant/static/media/bg-parpicue.2732b11fb52f4ecc1212.jpg",
     "static/media/gif.mp4": "/Menue-Restaurant/static/media/gif.e4b5e3462a7f0db4f3aa.mp4",
+    "static/media/bg-vegeterian.jpg": "/Menue-Restaurant/static/media/bg-vegeterian.c6c2a55d737f4d5842e0.jpg",
     "static/media/auth.jpg": "/Menue-Restaurant/static/media/auth.201f3c3c0cdb632cd2cf.jpg",
+    "static/media/bg-cheese.jpg": "/Menue-Restaurant/static/media/bg-cheese.ab65dba518f8d1df05a3.jpg",
     "static/media/bg-home.jpg": "/Menue-Restaurant/static/media/bg-home.12eb3e251fd1298076a4.jpg",
     "static/media/background.jpg": "/Menue-Restaurant/static/media/background.1407ff3348c88a7c9f5d.jpg",
     "static/media/subheader.jpg": "/Menue-Restaurant/static/media/subheader.44914aa252526a1cb50e.jpg",
@@ -31,11 +35,11 @@
     "static/media/slick.ttf": "/Menue-Restaurant/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Menue-Restaurant/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Menue-Restaurant/index.html",
-    "main.1c128e46.css.map": "/Menue-Restaurant/static/css/main.1c128e46.css.map",
-    "main.44ccb12f.js.map": "/Menue-Restaurant/static/js/main.44ccb12f.js.map"
+    "main.8d90138d.css.map": "/Menue-Restaurant/static/css/main.8d90138d.css.map",
+    "main.145a2f3e.js.map": "/Menue-Restaurant/static/js/main.145a2f3e.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c128e46.css",
-    "static/js/main.44ccb12f.js"
+    "static/css/main.8d90138d.css",
+    "static/js/main.145a2f3e.js"
   ]
 }
