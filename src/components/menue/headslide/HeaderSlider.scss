@@ -1,9 +1,7 @@
 %Flex-center {
  display: flex;
  align-items: center;
- @media (max-width:768px) {
-  justify-content: center;
- }
+
 }
 $imgs : (
  pizza1 : (
@@ -31,16 +29,21 @@ $imgs : (
 
  .main-item{
   width:650px  !important ;
-  height: 680px !important;
+  height: 620px !important;
   position: relative;
   z-index: 1;
+  @media (max-width:550px) {
+    height: 450px !important;
+    padding: 10px;
+  }
   cursor: pointer;
   &:hover ::after{
-   background-color: rgba(0, 0, 0, 0.048);
+   background-color: rgba(0, 0, 0, 0.027);
   }
   .col-slider{
    color:white;
    margin:70px 40px 0 45px;
+
   
    h1{
     font-size: 60px;
@@ -67,8 +70,16 @@ $imgs : (
     }
     h4,p{
      margin: 0 10px;
-     width: 90px;
      padding: 0;
+    }
+   }
+   @media (max-width: 550px) {
+    margin: 20px 10px;
+    h1{
+      font-size: 40px
+    }
+    p{
+      width: 50%
     }
    }
   }
@@ -95,7 +106,7 @@ $imgs : (
       height: 100%;
       width: 100%;
       z-index: -1;
-      transition: 0.5s;
+      transition: 0.2s;
 
      }
      
@@ -108,9 +119,35 @@ $imgs : (
    color: white;
   }
  }
+ .slick-prev{
+  position: absolute;
+  top: 90% !important;
+  left: 36% !important;
+  width: 50px;
+  z-index: 100;
+  &::before{
+    font-size: 30px;
+  }
+
+}
+
+.slick-next{
+  
+  position: absolute;
+  top: 90%;
+  right: 35%;
+  width: 50px;
+  z-index: 100;
+  &::before{
+    font-size: 30px;
+  }
+
+}
+
 
 
 }
+//slick slider
 
 
 
