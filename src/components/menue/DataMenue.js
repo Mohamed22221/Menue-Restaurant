@@ -2,6 +2,13 @@ import pizza1 from"../../img/menue/pizza1.png"
 import pizza2 from"../../img/menue/pizza2.png"
 import pizza3 from"../../img/menue/pizza3.png"
 import pizza4 from"../../img/menue/pizza4.png"
+import bgParponi from "../../img/menue/bg-perpony.jpg"
+import bgParpicue from "../../img/menue/bg-parpicue.jpg"
+import bgVegeterian from "../../img/menue/bg-vegeterian.jpg"
+import bgCheese from "../../img/menue/bg-cheese.jpg"
+
+
+
 import salad1 from"../../img/menue/salad1.png"
 import pasta1 from"../../img/menue/pasta1.png"
 import dessert1 from"../../img/menue/disert1.png"
@@ -22,6 +29,7 @@ const DataMenue = [
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         img:pizza1,
+        bgImg:bgParponi,
         price:13.99,
         size:`11"`,
         addition:"Pepperoni",
@@ -32,9 +40,10 @@ const DataMenue = [
         type:"pizza",
         name:"Vegetarian",
         title:"Feeling Cheesy",
-
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pizza2,
+        bgImg:bgVegeterian,
+
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:9.99,
         size:`11"`,
@@ -48,6 +57,8 @@ const DataMenue = [
         title:"Truly Italian ",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pizza3,
+        bgImg:bgCheese,
+
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:10.99,
         size:`11"`,
@@ -61,6 +72,7 @@ const DataMenue = [
         title:" Wilderness Bless",
         discription:"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc",
         img:pizza4,
+        bgImg:bgParpicue,
         allDisciption:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica",
         price:12.99,
         size:`26 × 26 × 5.5 cm"`,

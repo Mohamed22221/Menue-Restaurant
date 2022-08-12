@@ -1,0 +1,116 @@
+%Flex-center {
+ display: flex;
+ align-items: center;
+ @media (max-width:768px) {
+  justify-content: center;
+ }
+}
+$imgs : (
+ pizza1 : (
+    img :url("../../../img//menue/bg-perpony.jpg")
+    
+  ) ,
+  pizza2 : (
+   img :url("../../../img//menue/bg-vegeterian.jpg")
+
+  ) ,
+  pizza3 : (
+   img :url("../../../img//menue/bg-cheese.jpg")
+
+  ) ,
+  pizza4 : (
+   img :url("../../../img//menue/bg-parpicue.jpg")
+
+ ) 
+
+);
+.container-slider-menue{
+ overflow: hidden;
+ 
+ .slider-menu{
+
+ .main-item{
+  width:650px  !important ;
+  height: 680px !important;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  &:hover ::after{
+   background-color: rgba(0, 0, 0, 0.048);
+  }
+  .col-slider{
+   color:white;
+   margin:70px 40px 0 45px;
+  
+   h1{
+    font-size: 60px;
+    color: white;
+   }
+   .rating{
+    color: var(--gold-color);
+   }
+   p{
+    width: 80%;
+    padding: 10px 0;
+    font-size: 15px;
+   }
+   .main-about{
+ @extend %Flex-center;
+    margin: 18px 0;
+ 
+   }
+   .calory , .cheese{
+    margin: 0px 10;
+    @extend %Flex-center;
+    img{
+     width: 38px;
+    }
+    h4,p{
+     margin: 0 10px;
+     width: 90px;
+     padding: 0;
+    }
+   }
+  }
+  .fotter-slider1{
+   @extend %Flex-center;
+   h2{
+    margin-left: 20px;
+   }
+  }
+ }
+ @each $name , $bg in $imgs {
+  .#{$name}{
+     background:map-get($bg , img);
+     background-size: cover;
+     
+     ::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.055);
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      transition: 0.5s;
+
+     }
+     
+     
+   }
+
+  }
+  .content-slider{
+   z-index: 2;
+   color: white;
+  }
+ }
+
+
+}
+
+
+

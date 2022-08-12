@@ -6,10 +6,17 @@ import MenuFilter from '../components/menue/MenuFilter';
 import DataMenue from '../components/menue/DataMenue';
 
 import Customize from '../components/menue/Customize';
+import HeaderSlider from '../components/menue/headslide/HeaderSlider';
 
 const Menue = () => {
   //state data button
  const [menueData, setMenueData] = useState(DataMenue)
+ const [Data, setData] = useState([])
+
+ 
+  useEffect(() => {
+    setData(DataMenue)
+  }, [])
   
 
   //click filter Button
@@ -27,7 +34,7 @@ const Menue = () => {
 
   return (
     <>
-      <HeaderMenue />
+      <HeaderSlider DataMenue={Data} />
       <ButtonMenue  FilterButton={FilterButton}  />
       <MenuFilter menueData={menueData}/>
       <Customize menueData={menueData} />
