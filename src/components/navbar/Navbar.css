@@ -4,11 +4,11 @@
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: #1d2228;
+    background-color: #ffffff;
     z-index: 200;
 }
 nav {
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,12 +22,12 @@ nav {
   .logo  {
     display: flex;
     align-items: center;
-    color: white;
+    color: #1d2228;
   
   }
 
   .logo a img {
-    color: white;
+    color: #1d2228;
     width: 100px;
     
 }
@@ -48,7 +48,7 @@ nav {
     text-decoration: none;
     display: block;
     position: relative;
-    color: white;
+    color: #1d2228;
     cursor: pointer;
     font-weight: bold;
     transition: 0.7s;
@@ -90,7 +90,7 @@ nav {
   
   ul li a:hover {
    
-    background-color: #1d2228;
+    background-color: #ffffff;
   }
   
   .toggle-button {
@@ -107,7 +107,7 @@ nav {
   @media screen and (max-width: 940px) {
     .toggle-button {
       display: block;
-      color: white;
+      color: #1d2228;
       
     }
     ul{
@@ -116,7 +116,7 @@ nav {
       flex-direction: column;
       position: fixed;
       top: 60px;
-      background-color: #1d2228;
+      background-color: #ffffff;
       width: 100%;
       height: 100%;
       left: -1000px;

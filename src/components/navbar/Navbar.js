@@ -1,7 +1,7 @@
 import React, { useState, useRef  } from "react";
 import "./Navbar.css";
 import { Container } from '@mui/material';
-import LogoLight from"../../img/menue/logoo.png"
+import LogoLight from"../../img/glopal/logo.png"
 import { FaShopify } from 'react-icons/fa';
 import { IoIosSearch } from 'react-icons/io';
 import {  Link } from "react-router-dom";
