@@ -53,22 +53,8 @@ nav {
     font-weight: bold;
     transition: 0.7s;
   }
-  .shop{
-    position: relative;
-    font-size: 24px;
-  }
-  ul li a span{
-    position: absolute;
-    top: -8px;
-    right: -9px;
-    background-color: red;
-    border-radius: 50%;
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    
-  }
-  
+
+
   ul li a::after {
     content: "";
     position: absolute;
@@ -135,4 +121,36 @@ nav {
       left: 0px;
       text-align: center;
     }
+
+  }
+  .other-about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .other-about a{
+    color: #1d2228;
+  }
+  .other-about .shop{
+    
+    font-size: 26px;
+    color: #1d2228;
+    margin: 4px 8px 0 0;
+    
+  }
+  .other-about .main-shop{
+    position: relative;
+  }
+  .other-about .main-shop  span{
+    position: absolute;
+    top:-5px;
+    right: 0px;
+    background-color: rgb(90, 90, 90);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    width: 24px;
+    height: 22px;
+    margin: 0 auto;
   }

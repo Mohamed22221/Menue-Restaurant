@@ -35,7 +35,7 @@ const Navbar = ({HandelShow}) => {
     <Container maxWidth="lg">
       <nav>
           <div className="logo">
-          <a onClick={boxHandler} href="#Home"  ><img src={LogoLight} /></a>
+          <Link to="/Menue-Restaurant" onClick={boxHandler} href="#Home"  ><img src={LogoLight} /></Link>
            
         </div>
         <ul ref={linksContainer} className={toggle ? "active" : ""}>
@@ -55,21 +55,27 @@ const Navbar = ({HandelShow}) => {
             Contact
             </a>
           </li>
-          <li>
+
+        </ul>
+
+        <div className="other-about">
+          <div className="main-shop">
             <a onClick={boxHandler}  href="#Teletoken">
             <FaShopify className="shop" onClick={HandelShowMenue}/>
+           
+            
+            </a>
             <span>{SelectorTotalAmount}</span>
-            </a>
-          </li>
-          <li>
+            </div>
             <a onClick={boxHandler} href="#Contact">
-            <IoIosSearch className="shop"/>
+            <IoIosSearch className="shop search"/>
             </a>
-          </li>
-        </ul>
-        <div onClick={handleToggle} className="toggle-button">
-          <i className={toggle ? "fas fa-times" : "fas fa-bars"}></i>
-        </div>
+            <div onClick={handleToggle} className="toggle-button">
+              <i className={toggle ? "fas fa-times" : "fas fa-bars"}></i>
+            </div>
+          </div>
+
+
           
        
       </nav>

@@ -37,7 +37,7 @@ function App() {
     <ToastProvider 
     autoDismiss
     autoDismissTimeout={4000}
-    placement="top-right" >
+    placement="bottom-right" >
     <BrowserRouter>
       <Cart />
       <OverLay  />
