@@ -6,7 +6,7 @@ import { FaShopify } from 'react-icons/fa';
 import { IoIosSearch } from 'react-icons/io';
 import {  Link } from "react-router-dom";
 import {  useDispatch, useSelector } from "react-redux";
-import { ShowCart } from "../../store/StateSlice";
+import { ShowCart ,ShowSearch } from "../../store/StateSlice";
 
 
 const Navbar = ({HandelShow}) => {
@@ -18,7 +18,9 @@ const Navbar = ({HandelShow}) => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
-
+  const showSearch = () =>{
+    Dispatch(ShowSearch())
+  }
   const boxHandler = () => {
     setToggle(false);
   };
@@ -67,7 +69,7 @@ const Navbar = ({HandelShow}) => {
             </a>
             <span>{SelectorTotalAmount}</span>
             </div>
-            <a onClick={boxHandler} href="#Contact">
+            <a onClick={showSearch} href="#Contact">
             <IoIosSearch className="shop search"/>
             </a>
             <div onClick={handleToggle} className="toggle-button">

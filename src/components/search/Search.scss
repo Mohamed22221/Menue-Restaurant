@@ -1,0 +1,71 @@
+.form-search{
+
+ 
+ form{
+  position: fixed;
+  top: 20%;
+  z-index: 1000;
+  transition: 0.4s;
+  transition-duration: .3s;
+  left: 50%;
+  transform: scale(0)  translate(-30% ,-50%) ;
+  transform-origin: 10% 10%;
+  display: flex;
+  input{
+   width: 950px;
+   background-color: rgba(0, 0, 0, 0.842);
+   border: 0;
+   border-bottom: 2px solid #fff;
+   padding: 20px 20px;
+   font-size: 30px;
+   outline: none;
+   color: #fff;
+   &::placeholder{
+    color: white;
+   }
+
+   @media (max-width:1020px) {
+    width: 700px;
+
+   }
+   @media (max-width:740px) {
+    width: 400px;
+
+   }
+   @media (max-width:610px) {
+    width: 315px;
+
+   }
+  }
+  button{
+    
+   position: absolute;
+   top: 50%;
+   right: 0;
+   transform: translateY(-50%);
+   background-color: transparent;
+   border: 0;
+   color: #fff;
+   font-size: 30px;
+   outline: none;
+   transition: .3s;
+   cursor: pointer;
+   padding: 0;
+   padding: 10px;
+  }
+ }
+ .hide-form{
+  opacity: 0;
+  visibility: hidden;
+
+ }
+ .show-form{
+  transform: scale(1)  translate(-50% ,-50%)  ;
+  opacity: 1;
+  visibility: visible;
+  transform-origin: 0 0;
+  transform-origin: center;
+  transform-origin: 5% 5%;
+
+ }
+}

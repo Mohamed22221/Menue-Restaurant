@@ -6,19 +6,14 @@ import { FaShopify } from 'react-icons/fa';
 import { GoPlusSmall } from 'react-icons/go';
 import { useDispatch, useSelector } from 'react-redux';
 import { AddToCart, ShowItemid} from '../../store/SliceCart';
-import {  useToasts } from 'react-toast-notifications';
-import {  Link } from "react-router-dom";
+
 import { ShowPopUp } from '../../store/StateSlice';
 import ButtonOrder from '../glopalComponent/ButtonOrder';
-import { transform } from "framer-motion"
+
 
 const MenuFilter = ({menueData}) => {
     // sliceCart dispatch 
-    const transformer = transform([0, 100], [0, 360])
     const Dispatch = useDispatch()
-    const [item1 , setItem1] = useState([])
-
-    const { addToast } = useToasts();
     const OpenCustomize = (item) =>{
         Dispatch(ShowPopUp())
         Dispatch(ShowItemid({...item}))  

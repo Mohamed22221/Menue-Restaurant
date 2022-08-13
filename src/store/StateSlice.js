@@ -4,6 +4,7 @@ const initialState = {
   value: {
     popup:false,
     cartmeue : false,
+    search : false,
     overLay: false,
   }
 }
@@ -20,13 +21,20 @@ const StateSlice = createSlice({
     ShowCart(state, actions) {
      state.value.cartmeue = true
      state.value.overLay = true
-     console.log(actions)
+     
 
    },
+   ShowSearch(state, actions) {
+    state.value.search = true
+    state.value.overLay = true
+    
+
+  },
 
     Hide(state, actions) {
       state.value.popup = false
       state.value.cartmeue = false
+      state.value.search = false
       state.value.overLay = false
       
     },
@@ -34,5 +42,5 @@ const StateSlice = createSlice({
   },
 })
 
-export const {ShowPopUp ,ShowCart, Hide } = StateSlice.actions
+export const {ShowPopUp ,ShowCart, ShowSearch,Hide } = StateSlice.actions
 export default StateSlice.reducer
