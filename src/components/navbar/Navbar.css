@@ -131,11 +131,14 @@ nav {
   .other-about a{
     color: #1d2228;
   }
+  .other-about .shop:last-child{
+    margin: 4px 10px 0px 10px;
+  }
   .other-about .shop{
     
-    font-size: 26px;
+    font-size: 27px;
     color: #1d2228;
-    margin: 4px 8px 0 0;
+    margin: 4px 8px 0 8px;
     
   }
   .other-about .main-shop{

@@ -36,10 +36,17 @@ const StyledTopFotter = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
+
 .download{
+  display: flex;
+justify-content: space-between;
+align-items: center;
     img{
         width: 150px;
         margin: 4px;
+        @media (max-width:550px ) {
+          width: 80px;
+        }
     }
 }
 `

@@ -14,6 +14,9 @@ import { Hide, ShowPopUp } from "./store/StateSlice";
 import Loading from "./components/glopalComponent/Loading";
 import Home from "./bages/Home";
 import Search from "./components/search/Search";
+import ScrollToTop from "./components/glopalComponent/ScrollToTop";
+import ScrollTop from "./components/glopalComponent/ScrollTop";
+
 
 
 function App() {
@@ -44,7 +47,8 @@ function App() {
       <OverLay  />
       <Navbar  />
       <Search />
-
+      <ScrollToTop />
+      <ScrollTop />
       <Routes>
       <Route path="/" element={<Menue/> } />
       <Route path="menu" element={<Menue/>} />

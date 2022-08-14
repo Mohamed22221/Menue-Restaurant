@@ -21,12 +21,7 @@ const Search = () => {
     const data = DataMenue.filter(item =>{
       return item.name.toUpperCase().includes(targetValue.toUpperCase())
     })
-    if (targetValue === "") {
-      setFilterData([])
-      
-    } else {
-      setFilterData(data)
-    }
+    targetValue === "" ? setFilterData([]) : setFilterData(data) ;
     
   }
    //go to meal

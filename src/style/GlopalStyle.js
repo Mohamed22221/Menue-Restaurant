@@ -23,9 +23,13 @@ body{
     z-index: 100;
 
 }
+html {
+ scroll-behavior: smooth;
+}
 p{
     letter-spacing: 0.4px;
 }
+
 .order{
     padding: 5px 0;
     display: flex;
