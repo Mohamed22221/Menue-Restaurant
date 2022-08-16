@@ -7,6 +7,8 @@ import DataMenue from '../../../components/menue/DataMenue';
 import calory from "../../../img/glopal/calorie.png"
 import cheese from "../../../img/glopal/cheese2.png"
 import ButtonOrder from '../../glopalComponent/ButtonOrder';
+import { motion } from "framer-motion"
+
 const HeaderSlider = () => {
 
   const settings = {
@@ -29,12 +31,12 @@ const HeaderSlider = () => {
     ]
   };
   return (
-    <div className="container-slider-menue" >
+    <motion.div className="container-slider-menue"  initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} >
 
-      <Slider {...settings} className="slider-menu">
-        {DataMenue.filter((item) => item.type == "pizza").map((item) => {
+      <Slider {...settings} className="slider-menu" >
+        {DataMenue.filter((item) => item.type == "pizza").map((item ,index) => {
           return (
-            <div className={`main-item ${item.type}${item.id}`} >
+            <div className={`main-item ${item.type}${item.id}`} key={item.id} >
               <div className='col-slider'>
                 <h1>{item.name}</h1>
                 <span className='rating'>{item.rating}</span>
@@ -68,7 +70,7 @@ const HeaderSlider = () => {
 
 
       </Slider>
-    </div>
+    </motion.div>
   )
 }
 

@@ -4,11 +4,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import "./Search.scss"
 import { BsSearch } from 'react-icons/bs';
 import { AiOutlineClose } from 'react-icons/ai';
-
-
 import DataMenue from '../menue/DataMenue';
 import { Link } from "react-router-dom";
 import { Hide } from '../../store/StateSlice';
+
 const Search = () => {
   const SearchMeal = useSelector((state) => state.ShowAndHide.value.search)
   const Dispatch = useDispatch()

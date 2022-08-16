@@ -47,7 +47,9 @@ const ButtonMenue = ({ stateActive ,FilterButton }) => {
     <MainButton >
       {stateData.ButtonsFilter.map((item,index) =>{
         return (
-          <button onClick={()=>HandelClickFilter(item ,index)} className={HandellClassName(index)} ><img src={item.img}/>{item.name}</button>
+          <button onClick={()=>HandelClickFilter(item ,index)} className={HandellClassName(index)} key={item.id} >
+            <img src={item.img}/>{item.name}
+          </button>
         )
       })}
     </MainButton>

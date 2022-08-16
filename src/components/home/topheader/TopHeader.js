@@ -7,12 +7,13 @@ import fotter2 from "../../../img/home/12.png"
 import fotter3 from "../../../img/home/2.png"
 import ButtonOrder from '../../glopalComponent/ButtonOrder'
 import { TypeAnimation } from 'react-type-animation';
+import { motion } from "framer-motion"
 
 
 
 const TopHeader = () => {
   return (
-    <div className='main-top-header'>
+    <motion.div className='main-top-header'  initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} >
      <Container maxWidth="lg" className='container'>
       <div className='content-top-header'>
        <img src={pizzabg} />
@@ -34,7 +35,7 @@ const TopHeader = () => {
 
       </div>
      </Container>
-     </div>
+     </motion.div>
   )
 }
 

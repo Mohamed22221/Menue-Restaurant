@@ -44,7 +44,7 @@ const ItemCart = ({HandelHide }) => {
         :  MyItemSelector.map((item , index)=>{
             return (
               
-                <ItemOneCart key={index} >
+                <ItemOneCart key={item.id} >
                   <Link to={`/meal/${item.id}`} onClick={HandelHide} >
                 <div className='img'>
                 <img src={item.img}/>

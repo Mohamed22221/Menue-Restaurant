@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
-import HeaderMenue from '../components/menue/HeaderMenue';
 import ButtonMenue from '../components/menue/ButtonMenue';
 import MenuFilter from '../components/menue/MenuFilter';
 import DataMenue from '../components/menue/DataMenue';
-
 import Customize from '../components/menue/Customize';
 import HeaderSlider from '../components/menue/headslide/HeaderSlider';
 
@@ -13,11 +10,6 @@ const Menue = () => {
  const [menueData, setMenueData] = useState(DataMenue)
  const [Data, setData] = useState([])
 
- 
-  useEffect(() => {
-    setData(DataMenue)
-  }, [])
-  
 
   //click filter Button
   const FilterButton = (button , index)=>{

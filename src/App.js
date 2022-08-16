@@ -16,6 +16,7 @@ import Home from "./bages/Home";
 import Search from "./components/search/Search";
 import ScrollToTop from "./components/glopalComponent/ScrollToTop";
 import ScrollTop from "./components/glopalComponent/ScrollTop";
+import OneMeal from "./bages/OneMeal";
 
 
 
@@ -53,8 +54,8 @@ function App() {
       <Route path="/" element={<Menue/> } />
       <Route path="menu" element={<Menue/>} />
       <Route path="Menue-Restaurant" element={<Home/>} />
-      <Route path="/meal" element={<MealName />} >
-      <Route path=":mealId" element={<MealName/>} />
+      <Route path="/meal" element={<OneMeal />} >
+      <Route path=":mealId" element={<OneMeal/>} />
       </Route>
       </Routes>
       <Fotter />

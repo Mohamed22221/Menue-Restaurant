@@ -1,0 +1,35 @@
+.main-des-rev{
+ margin: 40px 0;
+ //buttons
+ button{
+   all: unset;
+   margin: 5px;
+   padding: 5px 20px;
+  cursor: pointer;
+  font-weight: 400;
+  border-radius: 5px;
+ }
+ .active{
+  background-color: var(--red-color);
+  color: white;
+ }
+ .un-active{
+  background-color: #f9f9f9;
+  color: black;
+ }
+
+ //description
+ .main-description{
+  margin: 5px;
+  width: 85%;
+  h2{
+   margin: 5px 0;
+  }
+  p{
+   color: var(--text-color);
+   padding: 10px 0;
+   line-height: 30px; 
+   font-size: 14px;
+  }
+ }
+}

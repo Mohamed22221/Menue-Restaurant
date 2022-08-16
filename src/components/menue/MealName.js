@@ -1,104 +1,67 @@
-import React , {useState , useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material';
-import { useParams } from 'react-router-dom'
 import DataMenue from '../menue/DataMenue';
 import { useDispatch } from 'react-redux';
-import { AddToCart} from '../../store/SliceCart';
+import { AddToCart } from '../../store/SliceCart';
 import { useToasts } from 'react-toast-notifications';
 import { motion } from "framer-motion"
 import { FiHeart } from 'react-icons/fi'
-import HeaderMeal from './HeaderMeal';
 import { FaShopify } from 'react-icons/fa';
 
 
-const MealName = ({MenuFilter}) => {
-  // params id 
-  const Params = useParams()
-  const ParamsId = `${Params.mealId}`
+const MealName = ({ ParamsId }) => {
+
   //add item to cart
   const Despatch = useDispatch()
   const { addToast } = useToasts();
+
+  const HandelOrder = (item) => {
+    Despatch(AddToCart(item))
+    addToast(`${item.name} Added To Cart`, { appearance: 'success' });
+  }
   
-  const HandelOrder = (item) =>{
-      Despatch(AddToCart(item))
-      addToast(`${item.name} Added To Cart`, { appearance: 'success' });
-  }
-  //active and inactive size
-  const [sizeState ,  setSizeState] = useState({
-    activeSize : null ,
-    sizeId : [{id:1 ,size:"11"},{id:2,size:"16"},{id:3,size:"22"}]
-  })
 
-  const HandelIndex = (index) =>{
-    setSizeState(
-     {...sizeState ,activeSize:sizeState.sizeId[index] }
-     
-    )
-    console.log(sizeState)
-  }
-  const HandelClassName = (index) =>{
-    if(sizeState.sizeId[index] === sizeState.activeSize){
-      return "size active"
-    }else{
-      return "size inactive"
-    }
 
-  }
-// when app to start
-useEffect(() => {
-  setSizeState(
-    {...sizeState ,activeSize:sizeState.sizeId[0] }
-   )
-}, [setSizeState])
-
-  
 
   return (
-    <StyleMealName  as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-      <HeaderMeal />
-      { DataMenue.filter(((item , index) => item.id === ParamsId)).map((item , index) =>{
-    return (
-      <Container key={index} >
-      <StyleItemMeal key={index} >
-        <LeftMeal>
-          <img src={item.img} />
-        </LeftMeal>
-        <RightMeal>
-          <Title >
-          <h1>{item.name}</h1>
-          <FiHeart className='heart-icon' />
-          </Title>
-          <Rating >
-          <span>{item.rating}</span>
-          <span>(24 ratings)</span>
-          </Rating> 
-          <About >
-          <h3>${item.price}</h3>
-          <p>{item.allDisciption}</p>
-          <h4>
-            Size :{sizeState.sizeId.map((item , index)=>{
-              return (
-                <span className={HandelClassName(index)} key={index} onClick={()=>HandelIndex(index)}>{item.size}</span>
-              )
-            })} 
-          </h4>
-          <button className='button-order'  onClick={ ()=> HandelOrder(item) }>Order<span><FaShopify className='shop'/></span></button>
-          </About> 
-      </RightMeal>
+    <StyleMealName as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
       
-      
-      </StyleItemMeal>
-      </Container>
-       )
-     })}
+      {DataMenue.filter(((item, index) => item.id === ParamsId)).map((item, index) => {
+        return (
+          <Container key={index} >
+            <StyleItemMeal key={index} >
+              <LeftMeal>
+                <img src={item.img} />
+              </LeftMeal>
+              <RightMeal>
+                <Title >
+                  <h1>{item.name}</h1>
+                  <FiHeart className='heart-icon' />
+                </Title>
+                <Rating >
+                  <span>{item.rating}</span>
+                  <span>(24 ratings)</span>
+                </Rating>
+                <About >
+                  <h3>${item.price}</h3>
+                  <p>{item.allDisciption}</p>
+                  <button className='button-order' onClick={() => HandelOrder(item)}>Order<span><FaShopify className='shop' /></span></button>
+                </About>
+              </RightMeal>
+
+
+            </StyleItemMeal>
+          </Container>
+        )
+      })}
     </StyleMealName>
   )
 }
 const StyleMealName = styled.div`
 
 `
-const StyleItemMeal= styled.div`
+const StyleItemMeal = styled.div`
 margin: 60px 0;
 @media (max-width:886px ) {
 margin: 30px 0;
@@ -110,7 +73,7 @@ justify-content: center;
 align-items: center;
 }
 `
-const LeftMeal= styled.div`
+const LeftMeal = styled.div`
 flex: 1;
 img{
   width: 250px;
@@ -124,11 +87,11 @@ img{
 }
 `
 
-const RightMeal= styled.div`
+const RightMeal = styled.div`
 flex: 2;
 
 `
-const Title= styled.div`
+const Title = styled.div`
 
   display: flex;
   justify-content: space-between;
@@ -154,7 +117,7 @@ const Title= styled.div`
 }
 
 `
-const Rating= styled.div`
+const Rating = styled.div`
   display: flex;
   align-items: center;
    svg{
@@ -170,7 +133,7 @@ const Rating= styled.div`
   }
 
 `
-const About= styled.div`
+const About = styled.div`
 
   h3 , h4 , p{
     padding: 10px 0;
